@@ -75,7 +75,8 @@ def masg(call):
 		
 		
 	elif call.data =="F2":
-		
+		bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+	
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
