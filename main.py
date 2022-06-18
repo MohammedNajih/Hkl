@@ -29,15 +29,7 @@ def boten(message):
     
     M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
     
-    C = types.InlineKeyboardButton(text ="CHECKER", callback_data="I1")
-    
-    H = types.InlineKeyboardButton(text ="HUNTER", callback_data="I2")
-    
-    U = types.InlineKeyboardButton(text ="CHECK USER", callback_data="I3")
-    
-    G = types.InlineKeyboardButton(text ="GRAT ACCOUNT", callback_data="I4")
-    
-    mas.add(I,F,T,S,M,C,H,U,G)
+    mas.add(I,F,T,S,M)
     
     bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
     
@@ -69,14 +61,13 @@ def masg(call):
 		U = types.InlineKeyboardButton(text ="CHECK USER", callback_data="I3")
 		G = types.InlineKeyboardButton(text ="GRAT ACCOUNT", callback_data="I4")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-		
+		mas.add(C,H,U,G,M)
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY FUCTION INSTAGRAM PLEASE CHOISE ONE FUCTION",reply_markup=mas)
 		
 		
 		
 	elif call.data =="F2":
 		bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
-	
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
