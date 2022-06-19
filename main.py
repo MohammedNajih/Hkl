@@ -62,7 +62,7 @@ def masg(call):
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		mas.add(C,H,U,G,M)
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY FUCTION INSTAGRAM PLEASE CHOISE ONE FUCTION",reply_markup=mas)
-		if call.data =="F2":
+		if call.data =="I1":
 			bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️")
 		
 		
