@@ -63,7 +63,7 @@ def masg(call):
 		mas.add(C,H,U,G,M)
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY FUCTION INSTAGRAM PLEASE CHOISE ONE FUCTION",reply_markup=mas)
 		if call.data =="F2":
-			bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+			bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️")
 		
 		
 	elif call.data =="F2":
