@@ -49,8 +49,8 @@ def masg(call):
 		tiktok = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.36.55.png?alt=media&token=3683d194-2703-4b1e-9649-7f8521a663d7' 
 		bot.send_photo(call.message.chat.id,tiktok,"Welcome to Menu TikTok\nSEND /tik IN BOOT" )
 	if call.data =="F4":
-		sanp = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.34.png?alt=media&token=a8946655-367b-4d41-b6b7-16d5fa9e13b7'
-		bot.send_photo(call.message.chat.id,snap,"Welcome to Menu SnapChat\nSEND /snap IN BOOT" )
+		snapchat = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.34.png?alt=media&token=a8946655-367b-4d41-b6b7-16d5fa9e13b7'
+		bot.send_photo(call.message.chat.id,snapchat,"Welcome to Menu SnapChat\nSEND /snap IN BOOT" )
 	if call.data =="F5":
 		twi = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.03.png?alt=media&token=e3825d71-2b1a-45ac-8e76-4cf33f6a34d4'
 		bot.send_photo(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" )
