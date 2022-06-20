@@ -58,10 +58,9 @@ def masg(call):
 def start(message):
     if message.text == '/insta':
         instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
-        bot.send_photo(message.chat.id,instagram, '•مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت')
-        
+        bot.send_photo(message.chat.id,instagram, '`•مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛\n1 لبدأ فحص الحسابات قم بارسال 🧿\n/checkinsta في البوت  🤖\n2 لبدأ فحص المتاحان قم بارسال 🧿\n/huntinsta في البوت 🤖\n3 لبدأ فحص اليوزرات قم بارسال 🧿\n/userinsta في البوت 🤖\n4 لبدأ انشاء الحسابات قم بارسال 🧿\n/ginsta في البوت 🤖`',parse_mode = "markdown")
     else:
-        bot.send_message(message.chat.id, 'ياحب ارسل . /start')
+        bot.send_message(message.chat.id, 'الامر خاطئ ابدأ من جديد /start  🤍')
 
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
