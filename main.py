@@ -22,7 +22,8 @@ def boten(message):
 	S = types.InlineKeyboardButton(text ="SNAPCHAT", callback_data="F4")
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,F,T,S,M)
-	bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+	logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
+	bot.send_photo(message.chat.id,logo, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
@@ -34,11 +35,23 @@ def masg(call):
 		T = types.InlineKeyboardButton(text =" TIKTOK ", callback_data="F3")
 		S = types.InlineKeyboardButton(text ="SNAPCHAT", callback_data="F4")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+		logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
+		bot.edit_photo(chat_id=call.message.chat.id,message_id=call.message.message_id,logo,text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
 	if call.data =="F1":
-			pr = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784' 
-			bot.send_photo(call.message.chat.id,pr,"GO TO START INSTAGRAM PLEASE\n SEND /insta IN BOOT" )
-		
+		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
+		bot.send_photo(call.message.chat.id,instagram,"GO TO START INSTAGRAM PLEASE\n SEND /insta IN BOOT" )
+	if call.data =="F2":
+		facebook = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.35.54.png?alt=media&token=1722f74c-b08b-4113-8d32-42379703f56f'
+		bot.send_photo(call.message.chat.id,facebook,"Welcome to Menu Facebook\nSEND /face IN BOOT" )
+	if call.data =="F3":
+		tiktok = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.36.55.png?alt=media&token=3683d194-2703-4b1e-9649-7f8521a663d7' 
+		bot.send_photo(call.message.chat.id,tiktok,"Welcome to Menu TikTok\nSEND /tik IN BOOT" )
+	if call.data =="F4":
+		sanp = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.34.png?alt=media&token=a8946655-367b-4d41-b6b7-16d5fa9e13b7'
+		bot.send_photo(call.message.chat.id,snap,"Welcome to Menu SnapChat\nSEND /snap IN BOOT" )
+	if call.data =="F2":
+		twi = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.03.png?alt=media&token=e3825d71-2b1a-45ac-8e76-4cf33f6a34d4'
+		bot.send_photo(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" )
 @bot.message_handler(commands=['insta'])
 def sms(message):
 	IN = types.InlineKeyboardMarkup(row_width=2) 
