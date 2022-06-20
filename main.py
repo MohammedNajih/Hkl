@@ -57,7 +57,7 @@ def sms(message):
 	U = types.InlineKeyboardButton(text ="CHECK USER", callback_data="I3")
 	G = types.InlineKeyboardButton(text ="GREAT ACCOUNT", callback_data="I4")
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-	mas.add(C,H,U,G,M)
+	IN.add(C,H,U,G,M)
 	bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=IN)
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
