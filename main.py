@@ -62,7 +62,8 @@ def boten(message):
 	I = types.InlineKeyboardButton(text ="ABOUT", callback_data="about")
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,M)
-	bot.send_message(message.chat.id, f"- ️",reply_markup=mas)
+	logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
+	bot.send_photo(message.chat.id, f"مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
@@ -71,9 +72,8 @@ def masg(call):
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		I = types.InlineKeyboardButton(text ="ABOUT", callback_data="about")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="- ",reply_markup=mas)
-	if call.data =="about":
-			bot.send_message(call.message.chat.id,f"مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت" )
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت",reply_markup=mas)
+	
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
