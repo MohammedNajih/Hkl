@@ -22,7 +22,7 @@ def boten(message):
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,F,T,S,W,M)
 	logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
-	bot.send_photo(message.chat.id,logo, f"مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت",reply_markup=mas)
+	bot.send_photo(message.chat.id,logo, f" Welcome to My Bot Fuction All Websites ",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
@@ -36,7 +36,7 @@ def masg(call):
 		W = types.InlineKeyboardButton(text ="Twitter", callback_data="F4")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="مرحبا بك في قائمة الانستا اختر الان احد الخيرات \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت",reply_markup=mas)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=" Welcome to My Bot Fuction All Websites ",reply_markup=mas)
 	if call.data =="F1":
 		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
 		bot.send_photo(call.message.chat.id,instagram,"Welcome to Menu INSTAGRAM PLEASE\nSEND /insta IN BOOT" )
@@ -56,28 +56,13 @@ def masg(call):
 
 @bot.message_handler(content_types=['text'])
 def start(message):
-    if message.text == '/ginsta':
-        bot.send_message(message.chat.id, '• نورت حبيبي ، عطيني اسمك ؟!')
-        bot.register_next_step_handler(message, get_name)
+    if message.text == '/insta':
+        instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
+        bot.send_photo(message.chat.id,instagram, '•مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت')
+        
     else:
         bot.send_message(message.chat.id, 'ياحب ارسل . /start')
 
-def get_name(message):
-    global name
-    name = message.text
-    bot.send_message(message.chat.id, ' • اسمك حلو والله نورت , ' + name + ', شقد عمرك يروحي ؟')
-    bot.register_next_step_handler(message, get_class)
-
-def get_class(message):
-    global class_
-    class_ = message.text
-    bot.send_message(message.chat.id, "شو تشتغل ، وظيفتك ؟!")
-    bot.register_next_step_handler(message, get_surname)
-
-def get_surname(message):
-    global surname
-    surname = message.text
-    bot.send_message(message.chat.id, 'Welcom My Bro , ' + name + ' , Age ' + surname + ', Job ' + class_)
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
