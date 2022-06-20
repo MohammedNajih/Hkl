@@ -51,7 +51,7 @@ def masg(call):
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
-	elif call.data =="F1":
+	if call.data =="F1":
 		
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		
@@ -61,13 +61,13 @@ def masg(call):
 		G = types.InlineKeyboardButton(text ="GRAT ACCOUNT", callback_data="I4")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		mas.add(C,H,U,G,M)
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY FUCTION INSTAGRAM PLEASE CHOISE ONE FUCTION",reply_markup=mas)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY FUCTION INSTAGRAM PLEASE CHOISE ONE FUCTION", reply_markup=mas)
 		if call.data =="I1":
 			bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️")
 		
 		
-	elif call.data =="F2":
-		bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+	if call.data =="F2":
+		bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️")
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
