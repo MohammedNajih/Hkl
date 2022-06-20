@@ -64,7 +64,7 @@ def start(message):
 
 
 @bot.message_handler(content_types=['text'])
-def face(message):
+def Face(message):
 	if message.text == '/face' or message.text == '/face@CH_IG_FB_TK_SNAP_BOT':
 		facebook = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.35.54.png?alt=media&token=1722f74c-b08b-4113-8d32-42379703f56f'
 		bot.send_photo(call.message.chat.id,facebook,"Welcome to Menu Facebook\nSEND /face IN BOOT" ,parse_mode = "markdown")
@@ -72,7 +72,7 @@ def face(message):
 		bot.send_message(message.chat.id, 'الامر خاطئ ابدأ من جديد /start  🤍')
 
 @bot.message_handler(content_types=['text'])
-def tik(message):
+def Tik(message):
 	if message.text == '/tik' or message.text == '/tik@CH_IG_FB_TK_SNAP_BOT':
 		twi = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.03.png?alt=media&token=e3825d71-2b1a-45ac-8e76-4cf33f6a34d4'
 		bot.send_photo(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" ,parse_mode = "markdown")
@@ -81,7 +81,7 @@ def tik(message):
 
 
 @bot.message_handler(content_types=['text'])
-def twi(message):
+def Twi(message):
 	if message.text == '/twi' or message.text == '/twi@CH_IG_FB_TK_SNAP_BOT':
 		twi = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.03.png?alt=media&token=e3825d71-2b1a-45ac-8e76-4cf33f6a34d4'
 		bot.send_photo(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" ,parse_mode = "markdown")
@@ -90,7 +90,7 @@ def twi(message):
 
 
 @bot.message_handler(content_types=['text'])
-def snap(message):
+def Snap(message):
 	if message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 		snapchat = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.34.png?alt=media&token=a8946655-367b-4d41-b6b7-16d5fa9e13b7'
 		bot.send_photo(call.message.chat.id,snapchat,"Welcome to Menu SnapChat\nSEND /snap IN BOOT",parse_mode = "markdown" )
