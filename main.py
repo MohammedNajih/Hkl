@@ -24,7 +24,7 @@ def boten(message):
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,F,T,S,W,M)
 	logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
-	bot.send_photo(message.chat.id,logo, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+	bot.send_photo(message.chat.id,logo, f"مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
@@ -38,10 +38,10 @@ def masg(call):
 		W = types.InlineKeyboardButton(text ="Twitter", callback_data="F4")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت",reply_markup=mas)
 	if call.data =="F1":
 		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
-		bot.send_photo(call.message.chat.id,instagram,"GO TO START INSTAGRAM PLEASE\n SEND /insta IN BOOT" )
+		bot.send_photo(call.message.chat.id,instagram,"Welcome to Menu INSTAGRAM PLEASE\nSEND /insta IN BOOT" )
 	if call.data =="F2":
 		facebook = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.35.54.png?alt=media&token=1722f74c-b08b-4113-8d32-42379703f56f'
 		bot.send_photo(call.message.chat.id,facebook,"Welcome to Menu Facebook\nSEND /face IN BOOT" )
@@ -55,23 +55,6 @@ def masg(call):
 		twi = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.03.png?alt=media&token=e3825d71-2b1a-45ac-8e76-4cf33f6a34d4'
 		bot.send_photo(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" )
 
-@bot.message_handler(commands=['insta'])
-def boten(message):
-	mas = types.InlineKeyboardMarkup(row_width=2) 
-	I = types.InlineKeyboardButton(text ="ABOUT", callback_data="about")
-	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-	mas.add(I,M)
-	logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
-	bot.send_photo(message.chat.id, f"مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ - لبدأ فحص الحسابات قم بارسال /checkinsta في البوت  - لبدأ فحص المتاحان قم بارسال /huntinsta في البوت  - لبدأ فحص اليوزرات قم بارسال /userinsta في البوت - لبدأ انشاء الحسابات قم بارسال /ginsta في البوت",reply_markup=mas)
-@bot.callback_query_handler(func=lambda call: True)
-def masg(call):
-	global nam
-	if call.data =="MohammedNajih":
-		mas = types.InlineKeyboardMarkup(row_width=2)
-		I = types.InlineKeyboardButton(text ="ABOUT", callback_data="about")
-		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛  - لبدأ فحص الحسابات قم بارسال /checkinsta في البوت  - لبدأ فحص المتاحان قم بارسال /huntinsta في البوت  - لبدأ فحص اليوزرات قم بارسال /userinsta في البوت - لبدأ انشاء الحسابات قم بارسال /ginsta في البوت",reply_markup=mas)
-	
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
