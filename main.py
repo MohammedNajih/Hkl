@@ -22,7 +22,7 @@ def boten(message):
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,F,T,S,W,M)
 	logo = 'https://t.me/z9oon/7'
-	bot.send_video(message.chat.id,logo, f" Welcome to My Bot Fuction All Websites ",reply_markup=mas)
+	bot.send_video(message.chat.id,logo, caption=" Welcome to My Bot Fuction All Websites ",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
@@ -38,35 +38,35 @@ def masg(call):
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text=" Welcome to My Bot Fuction All Websites ",reply_markup=mas)
 	elif call.data =="F1":
 		instagram = 'https://t.me/z9oon/5'
-		bot.send_video(call.message.chat.id,instagram,"Welcome to Menu INSTAGRAM PLEASE\nSEND /insta IN BOOT" )
+		bot.send_video(call.message.chat.id,instagram,caption="Welcome to Menu INSTAGRAM PLEASE\nSEND /insta IN BOOT" )
 	elif call.data =="F2":
 		facebook = 'https://t.me/z9oon/12'
-		bot.send_video(call.message.chat.id,facebook,"Welcome to Menu Facebook\nSEND /face IN BOOT" )
+		bot.send_video(call.message.chat.id,facebook,caption="Welcome to Menu Facebook\nSEND /face IN BOOT" )
 	elif call.data =="F3":
 		tiktok = 'https://t.me/z9oon/11'
-		bot.send_video(call.message.chat.id,tiktok,"Welcome to Menu TikTok\nSEND /tik IN BOOT" )
+		bot.send_video(call.message.chat.id,tiktok,caption="Welcome to Menu TikTok\nSEND /tik IN BOOT" )
 	elif call.data =="F4":
 		snapchat = 'https://t.me/z9oon/8'
-		bot.send_video(call.message.chat.id,snapchat,"Welcome to Menu SnapChat\nSEND /snap IN BOOT" )
+		bot.send_video(call.message.chat.id,snapchat,caption="Welcome to Menu SnapChat\nSEND /snap IN BOOT" )
 	elif call.data =="F5":
 		twi = 'https://t.me/z9oon/3'
-		bot.send_video(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" )
+		bot.send_video(call.message.chat.id,twi,caption="Welcome to Menu Twitter\nSEND /twi IN BOOT" )
 
 
 @bot.message_handler(content_types=['text'])
 def start(message):
 	if message.text == '/insta' or message.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
 		instagram = 'https://t.me/z9oon/5'
-		bot.send_video(message.chat.id,instagram, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶤᶰˢᵗᵃᶠ!ᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /cinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃ**\n**ˢᵉᶰᵈ /hinsta ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ ᵃᶜᶜᵒᵘᶰᵗ**\n**ˢᵉᶰᵈ /uinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵘˢᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n **ˢᵉᶰᵈ /ginsta ᶠᵒʳ ᵍʳᵉᵃᵗ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
+		bot.send_video(message.chat.id,instagram,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶤᶰˢᵗᵃᶠ!ᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /cinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃ**\n**ˢᵉᶰᵈ /hinsta ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ ᵃᶜᶜᵒᵘᶰᵗ**\n**ˢᵉᶰᵈ /uinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵘˢᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n **ˢᵉᶰᵈ /ginsta ᶠᵒʳ ᵍʳᵉᵃᵗ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	elif message.text == '/face' or message.text == '/face@CH_IG_FB_TK_SNAP_BOT':
 		facebook = 'https://t.me/z9oon/12'
-		bot.send_video(message.chat.id,facebook, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /hfb ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
+		bot.send_video(message.chat.id,facebook,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /hfb ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	elif message.text == '/tik' or message.text == '/tik@CH_IG_FB_TK_SNAP_BOT':
 		tiktok = 'https://t.me/z9oon/11'
-		bot.send_video(message.chat.id,tiktok, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /htik ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /utik ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
+		bot.send_video(message.chat.id,tiktok,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /htik ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /utik ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	elif message.text == '/twi' or message.text == '/twi@CH_IG_FB_TK_SNAP_BOT':
 		twi = 'https://t.me/z9oon/4' 
-		bot.send_video(message.chat.id,twi, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /htwi ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /utwi ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
+		bot.send_video(message.chat.id,twi,caption='**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /htwi ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /utwi ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 		snapchat = 'https://t.me/z9oon/10'
 		bot.send_video(message.chat.id,snapchat,caption= "**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /hsnap ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /usnap ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**",parse_mode = "markdown")
