@@ -12,12 +12,7 @@ logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
 
-"""
-	C = types.InlineKeyboardButton(text ="CHECKER", callback_data="I1")
-	H = types.InlineKeyboardButton(text ="HUNTER", callback_data="I2")
-	U = types.InlineKeyboardButton(text ="CHECK USER", callback_data="I3")
-	G = types.InlineKeyboardButton(text ="GREAT ACCOUNT", callback_data="I4") 
-"""
+
 @bot.message_handler(commands=['start'])
 def boten(message):
 	mas = types.InlineKeyboardMarkup(row_width=2) 
@@ -41,13 +36,7 @@ def masg(call):
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
 	if call.data =="F1":
-		mas = types.InlineKeyboardMarkup(row_width=2)
-		C = types.InlineKeyboardButton(text ="CHECKER", callback_data="I1")
-		H = types.InlineKeyboardButton(text ="HUNTER", callback_data="I2")
-		U = types.InlineKeyboardButton(text ="CHECK USER", callback_data="I3")
-		G = types.InlineKeyboardButton(text ="GRAT ACCOUNT", callback_data="I4")
-		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY FUCTION INSTAGRAM PLEASE CHOISE ONE FUCTION",reply_markup=mas)
+		bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️")
 		
 @bot.message_handler(commands=['insta'])
 def sms(message):
@@ -60,9 +49,9 @@ def sms(message):
 	IN.add(C,H,U,G,M)
 	bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=IN)
 @bot.callback_query_handler(func=lambda call: True)
-def masg(call):
+def Nop(call):
 	global nam
-	if call.data =="MM":
+	if call.data =="MohammmedNajih":
 		IN = types.InlineKeyboardMarkup(row_width=2)
 		C = types.InlineKeyboardButton(text ="CHECKER", callback_data="I1")
 		H = types.InlineKeyboardButton(text ="HUNTER", callback_data="I2")
@@ -70,7 +59,8 @@ def masg(call):
 		G = types.InlineKeyboardButton(text ="GREAT ACCOUNT", callback_data="I4") 
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=IN)
-		
+	if call.data == 'I1':
+		bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️")
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
