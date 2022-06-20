@@ -58,22 +58,21 @@ def masg(call):
 def start(message):
 	if message.text == '/insta' or message.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
 		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
-		bot.send_photo(message.chat.id,instagram, '**•Welcome To Menu Instagram**\n**HI, PLEASE CHOOSE ONE **\n **CHECKER INSTAGRAM ACCOUNTS **\n **SEND** /cinsta **IN BOT**\n**HUNTER INSTAGRAM ALL DOMIN **\n**SEND** /hinsta **IN BOT**',parse_mode = "markdown")
+		bot.send_photo(message.chat.id,instagram, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶤᶰˢᵗᵃᶠ!ᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /cinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃ**\n**ˢᵉᶰᵈ /hinsta ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ ᵃᶜᶜᵒᵘᶰᵗ**\n**ˢᵉᶰᵈ /uinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵘˢᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n **ˢᵉᶰᵈ /ginsta ᶠᵒʳ ᵍʳᵉᵃᵗ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	elif message.text == '/face' or message.text == '/face@CH_IG_FB_TK_SNAP_BOT':
-		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
-		bot.send_photo(message.chat.id,instagram, '**•Welcome To Menu Instagram**\n**HI, PLEASE CHOOSE ONE **\n **CHECKER INSTAGRAM ACCOUNTS **\n **SEND** /cinsta **IN BOT**\n**HUNTER INSTAGRAM ALL DOMIN **\n**SEND** /hinsta **IN BOT**',parse_mode = "markdown")
+		facebook = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.35.54.png?alt=media&token=1722f74c-b08b-4113-8d32-42379703f56f'
+		bot.send_photo(message.chat.id,facebook, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /hfb ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	elif message.text == '/tik' or message.text == '/tik@CH_IG_FB_TK_SNAP_BOT':
-		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
-		bot.send_photo(message.chat.id,instagram, '**•Welcome To Menu Instagram**\n**HI, PLEASE CHOOSE ONE **\n **CHECKER INSTAGRAM ACCOUNTS **\n **SEND** /cinsta **IN BOT**\n**HUNTER INSTAGRAM ALL DOMIN **\n**SEND** /hinsta **IN BOT**',parse_mode = "markdown")
+		tiktok = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.36.55.png?alt=media&token=3683d194-2703-4b1e-9649-7f8521a663d7' 
+		bot.send_photo(message.chat.id,tiktok, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /htik ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /utik ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	elif message.text == '/twi' or message.text == '/twi@CH_IG_FB_TK_SNAP_BOT':
-		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
-		bot.send_photo(message.chat.id,instagram, '**•Welcome To Menu Instagram**\n**HI, PLEASE CHOOSE ONE **\n **CHECKER INSTAGRAM ACCOUNTS **\n **SEND** /cinsta **IN BOT**\n**HUNTER INSTAGRAM ALL DOMIN **\n**SEND** /hinsta **IN BOT**',parse_mode = "markdown")
+		twi = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.03.png?alt=media&token=e3825d71-2b1a-45ac-8e76-4cf33f6a34d4'
+		bot.send_photo(message.chat.id,twi, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /htwi ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /utwi ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
-		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
-		bot.send_photo(message.chat.id,instagram, '**•Welcome To Menu Instagram**\n**HI, PLEASE CHOOSE ONE **\n **CHECKER INSTAGRAM ACCOUNTS **\n **SEND** /cinsta **IN BOT**\n**HUNTER INSTAGRAM ALL DOMIN **\n**SEND** /hinsta **IN BOT**',parse_mode = "markdown")
+		snapchat = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.34.png?alt=media&token=a8946655-367b-4d41-b6b7-16d5fa9e13b7'
+		bot.send_photo(message.chat.id,snapchat, '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /hsnap ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /usnap ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
 	else:
 		bot.send_message(message.chat.id, 'الامر خاطئ ابدأ من جديد /start  🤍')
-
 
 
 
