@@ -56,21 +56,32 @@ def masg(call):
 
 @bot.message_handler(content_types=['text'])
 def start(message):
-    if message.text == '/insta' or message.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
-        instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
-        bot.send_photo(message.chat.id,instagram, '**•Welcome To Menu Instagram**\n**HI, PLEASE CHOOSE ONE **\n **CHECKER INSTAGRAM ACCOUNTS **\n **SEND** /cinsta **IN BOT**\n**HUNTER INSTAGRAM ALL DOMIN **\n**SEND** /hinsta **IN BOT**',parse_mode = "markdown")
-    else:
-        bot.send_message(message.chat.id, 'الامر خاطئ ابدأ من جديد /start  🤍')
+	if message.text == '/insta' or message.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
+		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
+		bot.send_photo(message.chat.id,instagram, '**•Welcome To Menu Instagram**\n**HI, PLEASE CHOOSE ONE **\n **CHECKER INSTAGRAM ACCOUNTS **\n **SEND** /cinsta **IN BOT**\n**HUNTER INSTAGRAM ALL DOMIN **\n**SEND** /hinsta **IN BOT**',parse_mode = "markdown")
+	if message.text == '/face' or message.text == '/face@CH_IG_FB_TK_SNAP_BOT':
+		facebook = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.35.54.png?alt=media&token=1722f74c-b08b-4113-8d32-42379703f56f'
+		bot.send_photo(call.message.chat.id,facebook,"Welcome to Menu Facebook\nSEND /face IN BOOT" )
+	if message.text == '/tik' or message.text == '/tik@CH_IG_FB_TK_SNAP_BOT':
+		twi = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.03.png?alt=media&token=e3825d71-2b1a-45ac-8e76-4cf33f6a34d4'
+		bot.send_photo(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" )
+	if message.text == '/twi' or message.text == '/twi@CH_IG_FB_TK_SNAP_BOT':
+		twi = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.41.03.png?alt=media&token=e3825d71-2b1a-45ac-8e76-4cf33f6a34d4'
+		bot.send_photo(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" )
+	if message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+	
+	else:
+		bot.send_message(message.chat.id, 'الامر خاطئ ابدأ من جديد /start  🤍')
 
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
-    json_string = request.get_data().decode("utf-8")
-    update = telebot.types.Update.de_json(json_string)
-    bot.process_new_updates([update])
-    return "!", 200
+	json_string = request.get_data().decode("utf-8")
+	update = telebot.types.Update.de_json(json_string)
+	bot.process_new_updates([update])
+	return "!", 200
 
 if __name__ == "__main__":
-    bot.remove_webhook()
-    bot.set_webhook(url="https://php-sot.herokuapp.com/"+str(BOT_TOKEN))
-    server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+	bot.remove_webhook()
+	bot.set_webhook(url="https://php-sot.herokuapp.com/"+str(BOT_TOKEN))
+	server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
