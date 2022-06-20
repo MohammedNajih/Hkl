@@ -58,13 +58,24 @@ def masg(call):
 def sms(message):
 	instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
 	bot.send_photo(call.message.chat.id,instagram,"""
-	مرحبا بك في قائمة الانستا اختر الان احد الخيارات 
-	¶ 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت 
-	¶ 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت 
-	¶ 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت 
-	¶ 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت 
-	""" )
-
+مرحبا بك في قائمة الانستا اختر الان احد الخيارات 
+¶ 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت 
+¶ 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت 
+¶ 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت 
+¶ 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت 
+""" )
+@bot.callback_query_handler(func=lambda call: True)
+def masg(call):
+	global nam
+	if call.data =="MohammedNajih":
+		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
+		bot.send_photo(call.message.chat.id,instagram,"""
+مرحبا بك في قائمة الانستا اختر الان احد الخيارات 
+¶ 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت 
+¶ 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت 
+¶ 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت 
+¶ 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت 
+""" )	
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
