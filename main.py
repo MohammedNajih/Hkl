@@ -63,7 +63,7 @@ def boten(message):
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,M)
 	logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
-	bot.send_photo(message.chat.id,logo, f"- ️",reply_markup=mas)
+	bot.send_message(message.chat.id,photo=logo, f"- ️",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
