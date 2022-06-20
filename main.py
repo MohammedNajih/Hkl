@@ -36,7 +36,7 @@ def masg(call):
 		S = types.InlineKeyboardButton(text ="SNAPCHAT", callback_data="F4")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		logo = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784'
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,logo,text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
 	if call.data =="F1":
 		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
 		bot.send_photo(call.message.chat.id,instagram,"GO TO START INSTAGRAM PLEASE\n SEND /insta IN BOOT" )
