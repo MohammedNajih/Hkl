@@ -56,7 +56,7 @@ def masg(call):
 
 @bot.message_handler(content_types=['text'])
 def start(message):
-    if message.text == '/insta':
+    if message.text == '/insta' or message.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
         instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
         bot.send_photo(message.chat.id,instagram, '**•Welcome To Menu Instagram**\n**HI, PLEASE CHOOSE ONE **\n **CHECKER INSTAGRAM ACCOUNTS **\n **SEND** /cinsta **IN BOT**\n**HUNTER INSTAGRAM ALL DOMIN **\n**SEND** /hinsta **IN BOT**',parse_mode = "markdown")
     else:
