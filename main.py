@@ -73,7 +73,7 @@ def masg(call):
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="- ",reply_markup=mas)
 	if call.data =="about":
-		bot.send_message(call.message.chat.id,"مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت" )
+			bot.send_message(call.message.chat.id,f"مرحبا بك في قائمة الانستا اختر الان احد الخيارات؛ \n 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت \n 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت \n 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت \n 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت" )
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
