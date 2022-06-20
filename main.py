@@ -65,7 +65,7 @@ def sms(message):
 @bot.callback_query_handler(func=lambda call: True)
 def map(call):
 	global nam
-	if call.data =="MohammedNajih":
+	if call.data =="MM":
 		lod = types.InlineKeyboardMarkup(row_width=2) 
 		A = types.InlineKeyboardButton(text ="ABOUT", callback_data="about")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
