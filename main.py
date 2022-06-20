@@ -56,27 +56,15 @@ def masg(call):
 		bot.send_photo(call.message.chat.id,twi,"Welcome to Menu Twitter\nSEND /twi IN BOOT" )
 @bot.message_handler(commands=['insta'])
 def sms(message):
-	IN = types.InlineKeyboardMarkup(row_width=2) 
-	C = types.InlineKeyboardButton(text ="CHECKER", callback_data="I1")
-	H = types.InlineKeyboardButton(text ="HUNTER", callback_data="I2")
-	U = types.InlineKeyboardButton(text ="CHECK USER", callback_data="I3")
-	G = types.InlineKeyboardButton(text ="GREAT ACCOUNT", callback_data="I4")
-	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-	IN.add(C,H,U,G,M)
-	bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=IN)
-@bot.callback_query_handler(func=lambda call: True)
-def Nop(call):
-	global nam
-	if call.data =="MohammmedNajih":
-		IN = types.InlineKeyboardMarkup(row_width=2)
-		C = types.InlineKeyboardButton(text ="CHECKER", callback_data="I1")
-		H = types.InlineKeyboardButton(text ="HUNTER", callback_data="I2")
-		U = types.InlineKeyboardButton(text ="CHECK USER", callback_data="I3")
-		G = types.InlineKeyboardButton(text ="GREAT ACCOUNT", callback_data="I4") 
-		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=IN)
-	if call.data == 'I1':
-		bot.send_message(message.chat.id, f"- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️")
+	instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
+	bot.send_photo(call.message.chat.id,instagram,"""
+	مرحبا بك في قائمة الانستا اختر الان احد الخيارات 
+	¶ 1 لبدأ فحص الحسابات قم بارسال /checkinsta في البوت 
+	¶ 2 لبدأ فحص المتاحان قم بارسال /huntinsta في البوت 
+	¶ 3 لبدأ فحص اليوزرات قم بارسال /userinsta في البوت 
+	¶ 4 لبدأ انشاء الحسابات قم بارسال /ginsta في البوت 
+	""" )
+
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
