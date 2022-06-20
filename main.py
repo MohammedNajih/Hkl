@@ -57,19 +57,19 @@ def masg(call):
 @bot.message_handler(commands=['insta'])
 def sms(message):
 	lod = types.InlineKeyboardMarkup(row_width=2) 
-	A = types.InlineKeyboardButton(text ="INSTAGRAM", callback_data="F1")
+	A = types.InlineKeyboardButton(text ="ABOUT", callback_data="about")
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	lod.add(A,M)
 	instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
 	bot.send_photo(call.message.chat.id,instagram, reply_markup=lod)
 @bot.callback_query_handler(func=lambda call: True)
-def masg(call):
+def map(call):
 	global nam
 	if call.data =="MohammedNajih":
 		lod = types.InlineKeyboardMarkup(row_width=2) 
-		A = types.InlineKeyboardButton(text ="INSTAGRAM", callback_data="about")
+		A = types.InlineKeyboardButton(text ="ABOUT", callback_data="about")
 		M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="",reply_markup=lod)
 	if call.data =="about":
 		instagram = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/PicsArt%20MQ_06-20-04.37.10.png?alt=media&token=cdcb997c-a027-40c9-8951-e381984d8a4b'
 		bot.send_photo(call.message.chat.id,instagram,"""
