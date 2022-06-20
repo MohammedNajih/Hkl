@@ -37,7 +37,7 @@ def masg(call):
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- WELCOME TO MY BOT PLEASE CHOISE ANY FUCTION️",reply_markup=mas)
 	if call.data =="F1":
 			pr = 'https://firebasestorage.googleapis.com/v0/b/shoteriq.appspot.com/o/IMG_20220527_223323_610.jpg?alt=media&token=20802a14-94fe-481e-a404-aaed52bb7784' 
-			bot.send_photo(message.chat.id,pr,f"$_____MOHAMMED ALMUSWI IS BACK____$")
+			bot.send_photo(call.message.chat.id,pr)
 		
 @bot.message_handler(commands=['insta'])
 def sms(message):
