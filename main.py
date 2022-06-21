@@ -82,14 +82,14 @@ def start(message):
 		while True :
 			pro = requests.get('https://gimmeproxy.com/api/getProxy')
 			if '"protocol"' in pro.text or '"ip"' in pro.text or '"port"' in pro.text:
-				if str(pro.json()['protocol']) == 'socks4':
+				if str(pro.json()['protocol']) == 'socks5':
 					proxy = str(pro.json()['curl'])
 					uid = uuid4()
 					Coke=secrets.token_hex(8)*8
 					ssid = secrets.token_hex(8)*2
 					r = requests.session()
 					ERR = 0
-					rem = requests.get('https://10minutemail.net/address.api.php',headers = {'cookie':'PHPSESSID='+ssid},proxies={'socks4':proxy,'socks5':proxy})
+					rem = requests.get('https://10minutemail.net/address.api.php',headers = {'cookie':'PHPSESSID='+ssid},proxies={'socks5':proxy})
 					email = rem.json()['mail_get_mail']
 					bot.send_message(message.chat.id, '**Done Get Email : {}**'.format(email),parse_mode = "markdown")
 					num ="0123456789asdfghjklpoiuytrewqzxcvbnm"
@@ -102,18 +102,18 @@ def start(message):
 					data_age={'day': '27','month': '8','year': '2000'}
 					data_attemp={'email': email,'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:1589682409:{pas}','username': username,'first_name': 'BY HIMA - @ar_programmers','client_id': uid,'seamless_login_enabled': '1','opt_into_one_tap': 'false',}
 					data_get_code={'device_id': uid,'email': email}
-					req_attemp=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/attempt/',headers=head,data=data_attemp,proxies={'socks4':proxy,'socks5':proxy})
-					req_age=requests.post(f'https://www.instagram.com/web/consent/check_age_eligibility/',headers=head,data=data_age,proxies={'socks4':proxy,'socks5':proxy})
-					req_get_code=requests.post(f'https://i.instagram.com/api/v1/accounts/send_verify_email/',headers=head_get_code,data=data_get_code,proxies={'socks4':proxy,'socks5':proxy})
+					req_attemp=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/attempt/',headers=head,data=data_attemp,proxies={'socks5':proxy})
+					req_age=requests.post(f'https://www.instagram.com/web/consent/check_age_eligibility/',headers=head,data=data_age,proxies={'socks5':proxy})
+					req_get_code=requests.post(f'https://i.instagram.com/api/v1/accounts/send_verify_email/',headers=head_get_code,data=data_get_code,proxies={'socks5':proxy})
 					bot.send_message(message.chat.id, '**GETING THE CODE ...... **',parse_mode = "markdown")
 					sleep(15)
-					rei = requests.post('https://10minutemail.net/address.api.php',headers = {'cookie':'PHPSESSID='+ssid},proxies={'socks4':proxy,'socks5':proxy}).text
+					rei = requests.post('https://10minutemail.net/address.api.php',headers = {'cookie':'PHPSESSID='+ssid},proxies={'socks5':proxy}).text
 					code = rei.split(',"subject":"')[1].split(' is')[0]
 					data_send_code={'code': code,'device_id': uid,'email': email}
-					req_send_code=requests.post(f'https://i.instagram.com/api/v1/accounts/check_confirmation_code/',headers=head_get_code,data=data_send_code,proxies={'socks4':proxy,'socks5':proxy})
+					req_send_code=requests.post(f'https://i.instagram.com/api/v1/accounts/check_confirmation_code/',headers=head_get_code,data=data_send_code,proxies={'socks5':proxy})
 					singup_code=req_send_code.json()['signup_code']
 					data_crate={'email': email,'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:1589682409:{pas}','username': username,'first_name': 'By HIMA','month': '8','day': '27','year': '2002','client_id':uid,'seamless_login_enabled': '1','tos_version': 'row','force_sign_up_code': singup_code,}
-					req_crate=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/',headers=head,data=data_crate,proxies={'socks4':proxy,'socks5':proxy})
+					req_crate=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/',headers=head,data=data_crate,proxies={'socks5':proxy})
 					bot.send_message(message.chat.id, '**Done GrEaT AccOuNt :** `{}:{}`\n sessionid : `{}`'.format(email,pas,ssid),parse_mode = "markdown")
 			else:
 				bot.send_message(message.chat.id, '**ERORR PROXY **',parse_mode = "markdown")
