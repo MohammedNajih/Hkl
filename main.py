@@ -1,11 +1,12 @@
-import requests,user_agent,json,flask,telebot,random,os,sys
+import requests,user_agent,json,flask,telebot,random,os,sys,secrets
 import telebot
 from telebot import types
 from user_agent import generate_user_agent
 import logging
 from config import *
 from flask import Flask, request
-
+from uuid import uuid4 
+from time import sleep
 bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
 logger = telebot.logger
@@ -13,7 +14,7 @@ logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
 def boten(message):
-	mas = types.InlineKeyboardMarkup(row_width=2) 
+	mas = types.InlineKeyboardMarkup(row_width=1) 
 	I = types.InlineKeyboardButton(text ="INSTAGRAM", callback_data="F1")
 	F = types.InlineKeyboardButton(text ="FACEBOOK", callback_data="F2")
 	T = types.InlineKeyboardButton(text =" TIKTOK ", callback_data="F3")
@@ -28,7 +29,7 @@ def boten(message):
 def masg(call):
 	global nam
 	if call.data =="MohammedNajih":
-		mas = types.InlineKeyboardMarkup(row_width=2)
+		mas = types.InlineKeyboardMarkup(row_width=1)
 		I = types.InlineKeyboardButton(text ="INSTAGRAM", callback_data="F1")
 		F = types.InlineKeyboardButton(text ="FACEBOOK", callback_data="F2")
 		T = types.InlineKeyboardButton(text =" TIKTOK ", callback_data="F3")
@@ -70,6 +71,93 @@ def start(message):
 	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 		snapchat = 'https://t.me/z9oon/10'
 		bot.send_video(message.chat.id,snapchat,caption= "**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /hsnap ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /usnap ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**",parse_mode = "markdown")
+#	elif message.text == '/cinsta' or message.text == '/cinsta@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/hinsta' or message.text == '/hinsta@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/uinsta' or message.text == '/uinsta@CH_IG_FB_TK_SNAP_BOT':
+
+	elif message.text == '/ginsta' or message.text == '/ginsta@CH_IG_FB_TK_SNAP_BOT':
+		bot.send_message(message.chat.id,"¶** جاري انشاء الحساب لطفا انتظر بعض ثواني ** : ",parse_mode = "markdown")
+		while True :
+			uid = uuid4()
+			Coke=secrets.token_hex(8)*8
+			ssid = secrets.token_hex(8)*2
+			r = requests.session()
+			ERR = 0
+			rem = requests.get('https://10minutemail.net/address.api.php',headers = {'cookie':'PHPSESSID='+ssid})
+			email = rem.json()['mail_get_mail']
+			bot.send_message(message.chat.id, '**Done Get Email : {}**'.format(email),parse_mode = "markdown")
+			num ="0123456789asdfghjklpoiuytrewqzxcvbnm"
+			rand=''.join(random.choice(num)for man in   range(8))
+			username='medo'+rand
+			pas='@ONCLIK-@UT_UB'
+			head={'Host': 'www.instagram.com','Cookie': Coke,'User-Agent': generate_user_agent(),'Accept': '*/*','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','X-Csrftoken': 'missing','X-Instagram-Ajax': 'missing','X-Ig-App-Id': '936619743392459','X-Asbd-Id': '437806','X-Ig-Www-Claim': 'hmac.AR13pf0XdQA_XNAYLrmGWOJtWRr9WkLRRw_dNGcK6i1C5a_k','Content-Type': 'application/x-www-form-urlencoded','X-Requested-With': 'XMLHttpRequest','Content-Length': '432','Origin': 'https://www.instagram.com','Referer': 'https://www.instagram.com/accounts/emailsignup/','Te': 'trailers','Connection': 'close'}
+			head_get_code={'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'ar,en-US;q=0.9,en;q=0.8','content-length': '67','content-type': 'application/x-www-form-urlencoded','cookie': Coke,'origin': 'https://www.instagram.com','referer': 'https://www.instagram.com/','sec-ch-ua': '" Not;A Brand";v="99", "Google Chrome";v="91", "Chromium";v="91"','sec-ch-ua-mobile': '?0','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-site','user-agent': generate_user_agent(),'x-asbd-id': '437806','x-csrftoken': 'missing','x-ig-app-id': '936619743392459','x-ig-www-claim': '0','x-instagram-ajax': 'missing',}
+			head={'Host': 'www.instagram.com','Cookie': Coke,'User-Agent': generate_user_agent(),'Accept': '*/*','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','X-Csrftoken': 'missing','X-Instagram-Ajax': 'missing','X-Ig-App-Id': '936619743392459','X-Asbd-Id': '437806','X-Ig-Www-Claim': 'hmac.AR13pf0XdQA_XNAYLrmGWOJtWRr9WkLRRw_dNGcK6i1C5a_k','Content-Type': 'application/x-www-form-urlencoded','X-Requested-With': 'XMLHttpRequest','Content-Length': '432','Origin': 'https://www.instagram.com','Referer': 'https://www.instagram.com/accounts/emailsignup/','Te': 'trailers','Connection': 'close'}
+			data_age={'day': '27','month': '8','year': '2000'}
+			data_attemp={'email': email,'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:1589682409:{pas}','username': username,'first_name': 'BY HIMA - @ar_programmers','client_id': uid,'seamless_login_enabled': '1','opt_into_one_tap': 'false',}
+			data_get_code={'device_id': uid,'email': email}
+			req_attemp=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/attempt/',headers=head,data=data_attemp)
+			req_age=requests.post(f'https://www.instagram.com/web/consent/check_age_eligibility/',headers=head,data=data_age)
+			req_get_code=requests.post(f'https://i.instagram.com/api/v1/accounts/send_verify_email/',headers=head_get_code,data=data_get_code)
+			bot.send_message(message.chat.id, '**GETING THE CODE ...... **',parse_mode = "markdown")
+			sleep(15)
+			rei = requests.post('https://10minutemail.net/address.api.php',headers = {'cookie':'PHPSESSID='+ssid}).text
+			code = rei.split(',"subject":"')[1].split(' is')[0]
+			data_send_code={'code': code,'device_id': uid,'email': email}
+			req_send_code=requests.post(f'https://i.instagram.com/api/v1/accounts/check_confirmation_code/',headers=head_get_code,data=data_send_code)
+			singup_code=req_send_code.json()['signup_code']
+			data_crate={'email': email,'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:1589682409:{pas}','username': username,'first_name': 'By HIMA','month': '8','day': '27','year': '2002','client_id':uid,'seamless_login_enabled': '1','tos_version': 'row','force_sign_up_code': singup_code,}
+			req_crate=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/',headers=head,data=data_crate)
+			bot.send_message(message.chat.id, '**Done GrEaT AccOuNt :** `{}:{}`'.format(email,pas),parse_mode = "markdown")	
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+
+		
 	else:
 		error = 'https://t.me/z9oon/6'
 		bot.send_video(message.chat.id,error, caption="الامر خاطئ ابدأ من جديد /start  🤍")
