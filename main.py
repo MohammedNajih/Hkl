@@ -78,12 +78,12 @@ def start(message):
 #	elif message.text == '/uinsta' or message.text == '/uinsta@CH_IG_FB_TK_SNAP_BOT':
 
 	elif message.text == '/ginsta' or message.text == '/ginsta@CH_IG_FB_TK_SNAP_BOT':
-		bot.send_message(message.chat.id,"¶** جاري انشاء الحساب لطفا انتظر بعض ثواني ** : ",parse_mode = "markdown")
 		while True :
 			pro = requests.get('https://gimmeproxy.com/api/getProxy')
 			if '"protocol"' in pro.text or '"ip"' in pro.text or '"port"' in pro.text:
 				if str(pro.json()['protocol']) == 'socks5':
 					proxy = str(pro.json()['curl'])
+					bot.send_message(message.chat.id,"¶** جاري انشاء الحساب لطفا انتظر بعض ثواني ** : ",parse_mode = "markdown")
 					uid = uuid4()
 					Coke=secrets.token_hex(8)*8
 					ssid = secrets.token_hex(8)*2
