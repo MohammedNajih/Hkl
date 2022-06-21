@@ -168,10 +168,7 @@ def start(message):
 #	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
 		
-	else:
-		error = 'https://t.me/z9oon/6'
-		bot.send_video(message.chat.id,error, caption="الامر خاطئ ابدأ من جديد /start  🤍")
-
+	
 
 
 
