@@ -115,6 +115,8 @@ def start(message):
 					data_crate={'email': email,'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:1589682409:{pas}','username': username,'first_name': 'By HIMA','month': '8','day': '27','year': '2002','client_id':uid,'seamless_login_enabled': '1','tos_version': 'row','force_sign_up_code': singup_code,}
 					req_crate=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/',headers=head,data=data_crate,proxies={'socks5':proxy})
 					bot.send_message(message.chat.id, '**Done GrEaT AccOuNt :** `{}:{}`\n sessionid : `{}`'.format(email,pas,ssid),parse_mode = "markdown")
+				else:
+					bot.send_message(message.chat.id,"¶** خطأ في الخادم جاري احظار خادم شغال\n¶ ERORR PROXY SERCH IT **",parse_mode = "markdown")
 			else:
 				bot.send_message(message.chat.id, '**ERORR PROXY **',parse_mode = "markdown")
 #	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
