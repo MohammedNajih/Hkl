@@ -119,10 +119,10 @@ def start(message):
 					bot.send_message(message.chat.id,"¶** خطأ في الخادم جاري احظار خادم شغال\n¶ ERORR PROXY SERCH IT **",parse_mode = "markdown")
 			else:
 				bot.send_message(message.chat.id, '**ERORR PROXY **',parse_mode = "markdown")
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
-
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
-
+	elif message.text == 'احبك' or message.text == 'اعشقك' or message.text == 'تحبني':
+		bot.send_message(message.chat.id, 'انجب انا احب يوصف🥱')
+	elif message.text == 'تخليني' or message.text == 'انيجك':
+		bot.send_message(message.chat.id, 'حظر حالك بدي كبك بالزباله')
 #	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
 #	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
