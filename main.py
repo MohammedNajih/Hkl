@@ -123,8 +123,10 @@ def start(message):
 		bot.send_message(message.chat.id, 'انجب انا احب يوصف🥱')
 	elif message.text == 'تخليني' or message.text == 'انيجك':
 		bot.send_message(message.chat.id, 'حظر حالك بدي كبك بالزباله')
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
-
+	elif message.text == 'كس' or message.text == 'كس@CH_IG_FB_TK_SNAP_BOT':
+		bot.send_message(message.chat.id, 'جاري اابحث عن كس....')
+		sleep(2)
+		bot.send_message(message.chat.id, 'تم التاكد من انك كس حقيقي')
 #	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
 #	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
