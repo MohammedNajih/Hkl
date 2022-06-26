@@ -100,7 +100,7 @@ def start(message):
 				if (',null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[]') in response.text:
 					gm+=1
 					tk = secrets.token_hex(8)*2
-					emll = urllib.parse.quote(input(email))
+					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
 					headers = {'Host':'www.instagram.com','content-length':'72','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="101"','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','sec-ch-ua-mobile':'?0','x-instagram-ajax':'57ac339ce6f4','content-type':'application/x-www-form-urlencoded','accept':'*/*','x-requested-with':'XMLHttpRequest','x-asbd-id':'198387','user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Safari/537.36','x-csrftoken':tk,'sec-ch-ua-platform':'"Linux"','origin':'https://www.instagram.com','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','sec-fetch-dest':'empty','referer':'https://www.instagram.com/accounts/emailsignup/','accept-encoding':'gzip, deflate, br','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'csrftoken='+str(tk)}
@@ -143,7 +143,7 @@ def start(message):
 				if ("Neither") in response.text:
 					ho+=1
 					tk = secrets.token_hex(8)*2
-					emll = urllib.parse.quote(input(email))
+					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
 					headers = {'Host':'www.instagram.com','content-length':'72','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="101"','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','sec-ch-ua-mobile':'?0','x-instagram-ajax':'57ac339ce6f4','content-type':'application/x-www-form-urlencoded','accept':'*/*','x-requested-with':'XMLHttpRequest','x-asbd-id':'198387','user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Safari/537.36','x-csrftoken':tk,'sec-ch-ua-platform':'"Linux"','origin':'https://www.instagram.com','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','sec-fetch-dest':'empty','referer':'https://www.instagram.com/accounts/emailsignup/','accept-encoding':'gzip, deflate, br','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'csrftoken='+str(tk)}
@@ -186,7 +186,7 @@ def start(message):
 				if ("Neither") in response.text:
 					ot+=1
 					tk = secrets.token_hex(8)*2
-					emll = urllib.parse.quote(input(email))
+					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
 					headers = {'Host':'www.instagram.com','content-length':'72','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="101"','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','sec-ch-ua-mobile':'?0','x-instagram-ajax':'57ac339ce6f4','content-type':'application/x-www-form-urlencoded','accept':'*/*','x-requested-with':'XMLHttpRequest','x-asbd-id':'198387','user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Safari/537.36','x-csrftoken':tk,'sec-ch-ua-platform':'"Linux"','origin':'https://www.instagram.com','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','sec-fetch-dest':'empty','referer':'https://www.instagram.com/accounts/emailsignup/','accept-encoding':'gzip, deflate, br','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'csrftoken='+str(tk)}
@@ -229,7 +229,7 @@ def start(message):
 				if ('"error":"messages.INVALID_USERNAME"') in response.text:
 					ya+=1
 					tk = secrets.token_hex(8)*2
-					emll = urllib.parse.quote(input(email))
+					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
 					headers = {'Host':'www.instagram.com','content-length':'72','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="101"','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','sec-ch-ua-mobile':'?0','x-instagram-ajax':'57ac339ce6f4','content-type':'application/x-www-form-urlencoded','accept':'*/*','x-requested-with':'XMLHttpRequest','x-asbd-id':'198387','user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Safari/537.36','x-csrftoken':tk,'sec-ch-ua-platform':'"Linux"','origin':'https://www.instagram.com','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','sec-fetch-dest':'empty','referer':'https://www.instagram.com/accounts/emailsignup/','accept-encoding':'gzip, deflate, br','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'csrftoken='+str(tk)}
@@ -272,7 +272,7 @@ def start(message):
 				if str(response.json()['body']['exists']) == 'False':
 					mr+=1
 					tk = secrets.token_hex(8)*2
-					emll = urllib.parse.quote(input(email))
+					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
 					headers = {'Host':'www.instagram.com','content-length':'72','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="101"','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','sec-ch-ua-mobile':'?0','x-instagram-ajax':'57ac339ce6f4','content-type':'application/x-www-form-urlencoded','accept':'*/*','x-requested-with':'XMLHttpRequest','x-asbd-id':'198387','user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Safari/537.36','x-csrftoken':tk,'sec-ch-ua-platform':'"Linux"','origin':'https://www.instagram.com','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','sec-fetch-dest':'empty','referer':'https://www.instagram.com/accounts/emailsignup/','accept-encoding':'gzip, deflate, br','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'csrftoken='+str(tk)}
@@ -317,7 +317,7 @@ def start(message):
 				else:
 					ya+=1
 					tk = secrets.token_hex(8)*2
-					emll = urllib.parse.quote(input(email))
+					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
 					headers = {'Host':'www.instagram.com','content-length':'72','sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="101"','x-ig-app-id':'936619743392459','x-ig-www-claim':'0','sec-ch-ua-mobile':'?0','x-instagram-ajax':'57ac339ce6f4','content-type':'application/x-www-form-urlencoded','accept':'*/*','x-requested-with':'XMLHttpRequest','x-asbd-id':'198387','user-agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.40 Safari/537.36','x-csrftoken':tk,'sec-ch-ua-platform':'"Linux"','origin':'https://www.instagram.com','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','sec-fetch-dest':'empty','referer':'https://www.instagram.com/accounts/emailsignup/','accept-encoding':'gzip, deflate, br','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'csrftoken='+str(tk)}
