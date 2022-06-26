@@ -75,8 +75,6 @@ def start(message,call):
 		bot.send_video(message.chat.id,snapchat,caption= "**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /hsnap ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /usnap ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**",parse_mode = "markdown")
 	elif message.text == '/hinsta' or message.text == '/hinsta@CH_IG_FB_TK_SNAP_BOT':
 		gm=0;ya=0;ot=0;ho=0;ao=0;mr=0;bad=0;hit=0;ins=0
-		global nam
-		global call
 		while True:
 			sets= ['@gmail.com','@aol.com','@yahoo.com','@mail.ru','@hotmail.com','@outlook.com']
 			domin = random.choice(sets)
