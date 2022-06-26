@@ -76,7 +76,6 @@ def start(message):
 		gm=0;ya=0;ot=0;ho=0;ao=0;mr=0;bad=0;hit=0;ins=0
 		global nam
 		global call
-		call.data = "MohammedNajih"
 		while True:
 			sets= ['@gmail.com','@aol.com','@yahoo.com','@mail.ru','@hotmail.com','@outlook.com']
 			domin = random.choice(sets)
