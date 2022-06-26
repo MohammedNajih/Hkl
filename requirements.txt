@@ -3,3 +3,5 @@ flask
 user_agent
 requests
 uuid
+names
+faker
