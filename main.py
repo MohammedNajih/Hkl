@@ -56,7 +56,7 @@ def masg(call):
 
 
 @bot.message_handler(content_types=['text'])
-def start(message,call):
+def start(message):
 	if message.text == '/insta' or message.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
 		instagram = 'https://t.me/z9oon/5'
 		bot.send_video(message.chat.id,instagram,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶤᶰˢᵗᵃᶠ!ᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /cinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃ**\n**ˢᵉᶰᵈ /hinsta ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ ᵃᶜᶜᵒᵘᶰᵗ**\n**ˢᵉᶰᵈ /uinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵘˢᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n **ˢᵉᶰᵈ /ginsta ᶠᵒʳ ᵍʳᵉᵃᵗ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
@@ -132,7 +132,7 @@ def start(message,call):
 						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
 						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
 						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="FUCKED HUNTER",reply_markup=mas)
+						bot.edit_message_text(message.chat.id,text="FUCKED HUNTER",reply_markup=mas)
 			elif (email.split('@')[1])=='hotmail.com':
 				email = email
 				user = user
@@ -175,7 +175,7 @@ def start(message,call):
 						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
 						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
 						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="FUCKED HUNTER",reply_markup=mas)
+						bot.edit_message_text(message.chat.id,text="FUCKED HUNTER",reply_markup=mas)
 			elif (email.split('@')[1])=='outlook.com':
 				email = email
 				user = user
@@ -218,7 +218,7 @@ def start(message,call):
 						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
 						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
 						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="FUCKED HUNTER",reply_markup=mas)
+						bot.edit_message_text(message.chat.id,text="FUCKED HUNTER",reply_markup=mas)
 			elif (email.split('@')[1])=='yahoo.com':
 				email = email
 				user = user
@@ -261,7 +261,7 @@ def start(message,call):
 						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
 						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
 						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="FUCKED HUNTER",reply_markup=mas)
+						bot.edit_message_text(message.chat.id,text="FUCKED HUNTER",reply_markup=mas)
 			elif (email.split('@')[1])=='mail.ru':
 				email = email
 				user = user
@@ -304,7 +304,7 @@ def start(message,call):
 						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
 						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
 						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="FUCKED HUNTER",reply_markup=mas) 
+						bot.edit_message_text(message.chat.id,text="FUCKED HUNTER",reply_markup=mas) 
 			elif (email.split('@')[1])=='aol.com':
 				email = email
 				user = user
@@ -349,7 +349,7 @@ def start(message,call):
 						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
 						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
 						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="FUCKED HUNTER",reply_markup=mas)
+						bot.edit_message_text(message.chat.id,text="FUCKED HUNTER",reply_markup=mas)
 #	elif message.text == '/cinsta' or message.text == '/cinsta@CH_IG_FB_TK_SNAP_BOT':
 
 #	elif message.text == '/uinsta' or message.text == '/uinsta@CH_IG_FB_TK_SNAP_BOT':
