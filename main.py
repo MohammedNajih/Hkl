@@ -75,7 +75,7 @@ def start(message):
 	elif message.text == '/hinsta' or message.text == '/hinsta@CH_IG_FB_TK_SNAP_BOT':
 		gm=0;ya=0;ot=0;ho=0;ao=0;mr=0;bad=0;hit=0;ins=0
 		global nam
-		global call.data
+		global call
 		global message
 		call.data = "MohammedNajih"
 		while True:
