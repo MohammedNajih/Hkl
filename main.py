@@ -111,7 +111,7 @@ def start(message):
 						hit+=1
 						url = requests.get('https://kssd.herokuapp.com/info.php?user={}'.format(user)).text
 						copyright = url.split('{"username"')[0]
-						username = url.split('{"username":"')[1].split('"')[0]
+						
 						name = url.split(',"name":"')[1].split('"')[0]
 						bio = url.split('"bio":"<div class="user__info-desc"> <br />')[1].split('</div"')[0]
 						post = url.split('"post":"<li class="list__item">')[1].split('</li>"')[0]
@@ -139,7 +139,7 @@ def start(message):
 						hit+=1
 						url = requests.get('https://kssd.herokuapp.com/info.php?user={}'.format(user)).text
 						copyright = url.split('{"username"')[0]
-						username = url.split('{"username":"')[1].split('"')[0]
+						
 						name = url.split(',"name":"')[1].split('"')[0]
 						bio = url.split('"bio":"<div class="user__info-desc"> <br />')[1].split('</div"')[0]
 						post = url.split('"post":"<li class="list__item">')[1].split('</li>"')[0]
@@ -167,7 +167,7 @@ def start(message):
 						hit+=1
 						url = requests.get('https://kssd.herokuapp.com/info.php?user={}'.format(user)).text
 						copyright = url.split('{"username"')[0]
-						username = url.split('{"username":"')[1].split('"')[0]
+						
 						name = url.split(',"name":"')[1].split('"')[0]
 						bio = url.split('"bio":"<div class="user__info-desc"> <br />')[1].split('</div"')[0]
 						post = url.split('"post":"<li class="list__item">')[1].split('</li>"')[0]
@@ -195,7 +195,7 @@ def start(message):
 						hit+=1
 						url = requests.get('https://kssd.herokuapp.com/info.php?user={}'.format(user)).text
 						copyright = url.split('{"username"')[0]
-						username = url.split('{"username":"')[1].split('"')[0]
+						
 						name = url.split(',"name":"')[1].split('"')[0]
 						bio = url.split('"bio":"<div class="user__info-desc"> <br />')[1].split('</div"')[0]
 						post = url.split('"post":"<li class="list__item">')[1].split('</li>"')[0]
@@ -222,7 +222,6 @@ def start(message):
 						hit+=1
 						url = requests.get('https://kssd.herokuapp.com/info.php?user={}'.format(user)).text
 						copyright = url.split('{"username"')[0]
-						username = url.split('{"username":"')[1].split('"')[0]
 						name = url.split(',"name":"')[1].split('"')[0]
 						bio = url.split('"bio":"<div class="user__info-desc"> <br />')[1].split('</div"')[0]
 						post = url.split('"post":"<li class="list__item">')[1].split('</li>"')[0]
@@ -252,7 +251,6 @@ def start(message):
 						hit+=1
 						url = requests.get('https://kssd.herokuapp.com/info.php?user={}'.format(user)).text
 						copyright = url.split('{"username"')[0]
-						username = url.split('{"username":"')[1].split('"')[0]
 						name = url.split(',"name":"')[1].split('"')[0]
 						bio = url.split('"bio":"<div class="user__info-desc"> <br />')[1].split('</div"')[0]
 						post = url.split('"post":"<li class="list__item">')[1].split('</li>"')[0]
