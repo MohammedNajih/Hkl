@@ -1,4 +1,4 @@
-import requests,user_agent,json,flask,telebot,random,os,sys,secrets
+import requests,user_agent,json,flask,telebot,random,os,sys,secrets,names
 import telebot
 from telebot import types
 from user_agent import generate_user_agent
@@ -6,6 +6,7 @@ import logging
 from config import *
 from flask import Flask, request
 from uuid import uuid4 
+from faker import Faker 
 from time import sleep
 bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
