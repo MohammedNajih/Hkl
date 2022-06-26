@@ -56,8 +56,7 @@ def masg(call):
 
 
 @bot.message_handler(content_types=['text'])
-@bot.callback_query_handler(func=lambda call: True)
-def start(message,call):
+def start(message):
 	if message.text == '/insta' or message.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
 		instagram = 'https://t.me/z9oon/5'
 		bot.send_video(message.chat.id,instagram,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶤᶰˢᵗᵃᶠ!ᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /cinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃ**\n**ˢᵉᶰᵈ /hinsta ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ ᵃᶜᶜᵒᵘᶰᵗ**\n**ˢᵉᶰᵈ /uinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵘˢᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n **ˢᵉᶰᵈ /ginsta ᶠᵒʳ ᵍʳᵉᵃᵗ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
@@ -119,21 +118,8 @@ def start(message,call):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					else:
-						bad+=1
-						mas = types.InlineKeyboardMarkup(row_width=2)
-						G = types.InlineKeyboardButton(f'GMAIL:{gm}',callback_data="1x")
-						Y = types.InlineKeyboardButton(f'YAHOO:{ya}', callback_data="1x")
-						I = types.InlineKeyboardButton(f'INSTAGRAM:{ins}', callback_data="1x")
-						H = types.InlineKeyboardButton(f'HOTMAIL:{ho}', callback_data="1x")
-						O = types.InlineKeyboardButton(f'OUTLOOK:{ot}', callback_data="1x")
-						A = types.InlineKeyboardButton(f'AOL:{ao}', callback_data="1x")
-						M = types.InlineKeyboardButton(f'MAIL.RU:{mr}', callback_data="1x")
-						E = types.InlineKeyboardButton(f'EMAIL:{email}', callback_data="1x")
-						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
-						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
-						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.send_message(message.chat.id,text="**FUCKED HUNTER**",parse_mode = "markdown",reply_markup=mas)
+					
+
 			elif (email.split('@')[1])=='hotmail.com':
 				email = email
 				user = user
@@ -162,21 +148,8 @@ def start(message,call):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					else:
-						bad+=1
-						mas = types.InlineKeyboardMarkup(row_width=2)
-						G = types.InlineKeyboardButton(f'GMAIL:{gm}',callback_data="1x")
-						Y = types.InlineKeyboardButton(f'YAHOO:{ya}', callback_data="1x")
-						I = types.InlineKeyboardButton(f'INSTAGRAM:{ins}', callback_data="1x")
-						H = types.InlineKeyboardButton(f'HOTMAIL:{ho}', callback_data="1x")
-						O = types.InlineKeyboardButton(f'OUTLOOK:{ot}', callback_data="1x")
-						A = types.InlineKeyboardButton(f'AOL:{ao}', callback_data="1x")
-						M = types.InlineKeyboardButton(f'MAIL.RU:{mr}', callback_data="1x")
-						E = types.InlineKeyboardButton(f'EMAIL:{email}', callback_data="1x")
-						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
-						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
-						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.send_message(message.chat.id,text="**FUCKED HUNTER**",parse_mode = "markdown",reply_markup=mas)
+					
+
 			elif (email.split('@')[1])=='outlook.com':
 				email = email
 				user = user
@@ -205,21 +178,8 @@ def start(message,call):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					else:
-						bad+=1
-						mas = types.InlineKeyboardMarkup(row_width=2)
-						G = types.InlineKeyboardButton(f'GMAIL:{gm}',callback_data="1x")
-						Y = types.InlineKeyboardButton(f'YAHOO:{ya}', callback_data="1x")
-						I = types.InlineKeyboardButton(f'INSTAGRAM:{ins}', callback_data="1x")
-						H = types.InlineKeyboardButton(f'HOTMAIL:{ho}', callback_data="1x")
-						O = types.InlineKeyboardButton(f'OUTLOOK:{ot}', callback_data="1x")
-						A = types.InlineKeyboardButton(f'AOL:{ao}', callback_data="1x")
-						M = types.InlineKeyboardButton(f'MAIL.RU:{mr}', callback_data="1x")
-						E = types.InlineKeyboardButton(f'EMAIL:{email}', callback_data="1x")
-						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
-						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
-						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.send_message(message.chat.id,text="**FUCKED HUNTER**",parse_mode = "markdown",reply_markup=mas)
+					
+
 			elif (email.split('@')[1])=='yahoo.com':
 				email = email
 				user = user
@@ -248,21 +208,8 @@ def start(message,call):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					else:
-						bad+=1
-						mas = types.InlineKeyboardMarkup(row_width=2)
-						G = types.InlineKeyboardButton(f'GMAIL:{gm}',callback_data="1x")
-						Y = types.InlineKeyboardButton(f'YAHOO:{ya}', callback_data="1x")
-						I = types.InlineKeyboardButton(f'INSTAGRAM:{ins}', callback_data="1x")
-						H = types.InlineKeyboardButton(f'HOTMAIL:{ho}', callback_data="1x")
-						O = types.InlineKeyboardButton(f'OUTLOOK:{ot}', callback_data="1x")
-						A = types.InlineKeyboardButton(f'AOL:{ao}', callback_data="1x")
-						M = types.InlineKeyboardButton(f'MAIL.RU:{mr}', callback_data="1x")
-						E = types.InlineKeyboardButton(f'EMAIL:{email}', callback_data="1x")
-						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
-						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
-						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.send_message(message.chat.id,text="**FUCKED HUNTER**",parse_mode = "markdown",reply_markup=mas)
+					
+
 			elif (email.split('@')[1])=='mail.ru':
 				email = email
 				user = user
@@ -291,21 +238,8 @@ def start(message,call):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					else:
-						bad+=1
-						mas = types.InlineKeyboardMarkup(row_width=2)
-						G = types.InlineKeyboardButton(f'GMAIL:{gm}',callback_data="1x")
-						Y = types.InlineKeyboardButton(f'YAHOO:{ya}', callback_data="1x")
-						I = types.InlineKeyboardButton(f'INSTAGRAM:{ins}', callback_data="1x")
-						H = types.InlineKeyboardButton(f'HOTMAIL:{ho}', callback_data="1x")
-						O = types.InlineKeyboardButton(f'OUTLOOK:{ot}', callback_data="1x")
-						A = types.InlineKeyboardButton(f'AOL:{ao}', callback_data="1x")
-						M = types.InlineKeyboardButton(f'MAIL.RU:{mr}', callback_data="1x")
-						E = types.InlineKeyboardButton(f'EMAIL:{email}', callback_data="1x")
-						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
-						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
-						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.send_message(message.chat.id,text="**FUCKED HUNTER**",parse_mode = "markdown",reply_markup=mas) 
+					
+ 
 			elif (email.split('@')[1])=='aol.com':
 				email = email
 				user = user
@@ -336,21 +270,8 @@ def start(message,call):
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
 						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
-					else:
-						bad+=1
-						mas = types.InlineKeyboardMarkup(row_width=2)
-						G = types.InlineKeyboardButton(f'GMAIL:{gm}',callback_data="1x")
-						Y = types.InlineKeyboardButton(f'YAHOO:{ya}', callback_data="1x")
-						I = types.InlineKeyboardButton(f'INSTAGRAM:{ins}', callback_data="1x")
-						H = types.InlineKeyboardButton(f'HOTMAIL:{ho}', callback_data="1x")
-						O = types.InlineKeyboardButton(f'OUTLOOK:{ot}', callback_data="1x")
-						A = types.InlineKeyboardButton(f'AOL:{ao}', callback_data="1x")
-						M = types.InlineKeyboardButton(f'MAIL.RU:{mr}', callback_data="1x")
-						E = types.InlineKeyboardButton(f'EMAIL:{email}', callback_data="1x")
-						S = types.InlineKeyboardButton(f'ERORR:{bad}', callback_data="1x")
-						D = types.InlineKeyboardButton('DEVLOPER', url='https://t.me/ONCLIK')
-						mas.add(G,Y,H,O,A,M,I,E,S,D)
-						bot.send_message(message.chat.id,text="**FUCKED HUNTER**",parse_mode = "markdown",reply_markup=mas)
+					
+						
 #	elif message.text == '/cinsta' or message.text == '/cinsta@CH_IG_FB_TK_SNAP_BOT':
 
 #	elif message.text == '/uinsta' or message.text == '/uinsta@CH_IG_FB_TK_SNAP_BOT':
