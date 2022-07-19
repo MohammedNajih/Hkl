@@ -239,23 +239,23 @@ def masg(call):
 
 
 @bot.message_handler(content_types=['text'])
-def start(message):
-	if message.text == '/insta' or message.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
+def start(me):
+	if me.text == '/insta' or me.text == '/insta@CH_IG_FB_TK_SNAP_BOT':
 		instagram = 'https://t.me/z9oon/5'
-		bot.send_video(message.chat.id,instagram,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶤᶰˢᵗᵃᶠ!ᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /cinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃ**\n**ˢᵉᶰᵈ /hinsta ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ ᵃᶜᶜᵒᵘᶰᵗ**\n**ˢᵉᶰᵈ /uinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵘˢᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n **ˢᵉᶰᵈ /ginsta ᶠᵒʳ ᵍʳᵉᵃᵗ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
-	elif message.text == '/face' or message.text == '/face@CH_IG_FB_TK_SNAP_BOT':
+		bot.send_video(me.chat.id,instagram,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶤᶰˢᵗᵃᶠ!ᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /cinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃ**\n**ˢᵉᶰᵈ /hinsta ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ ᵃᶜᶜᵒᵘᶰᵗ**\n**ˢᵉᶰᵈ /uinsta ᶠᵒʳ ᶜʰᵉᶜᵏᵉʳ ᵘˢᵉʳ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n **ˢᵉᶰᵈ /ginsta ᶠᵒʳ ᵍʳᵉᵃᵗ ᵃᶜᶜᵒᵘᶰᵗ ᶤᶰˢᵗᵃᵍʳᵃᵐ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
+	elif me.text == '/face' or me.text == '/face@CH_IG_FB_TK_SNAP_BOT':
 		facebook = 'https://t.me/z9oon/12'
-		bot.send_video(message.chat.id,facebook,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /hfb ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
-	elif message.text == '/tik' or message.text == '/tik@CH_IG_FB_TK_SNAP_BOT':
+		bot.send_video(me.chat.id,facebook,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /hfb ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᶠᵃᶜᵉᵇᵒᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
+	elif me.text == '/tik' or me.text == '/tik@CH_IG_FB_TK_SNAP_BOT':
 		tiktok = 'https://t.me/z9oon/11'
-		bot.send_video(message.chat.id,tiktok,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /htik ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /utik ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
-	elif message.text == '/twi' or message.text == '/twi@CH_IG_FB_TK_SNAP_BOT':
+		bot.send_video(me.chat.id,tiktok,caption= '**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /htik ᶠᵒʳ ʰᵘᶰᵗᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /utik ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗᶤᵏᵗᵒᵏ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
+	elif me.text == '/twi' or me.text == '/twi@CH_IG_FB_TK_SNAP_BOT':
 		twi = 'https://t.me/z9oon/4' 
-		bot.send_video(message.chat.id,twi,caption='**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /htwi ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /utwi ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
-	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+		bot.send_video(me.chat.id,twi,caption='**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /htwi ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /utwi ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ᵗʷᶤᵗᵗᵉʳ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**',parse_mode = "markdown")
+	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 		snapchat = 'https://t.me/z9oon/10'
-		bot.send_video(message.chat.id,snapchat,caption= "**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /hsnap ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /usnap ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**",parse_mode = "markdown")
-	elif message.text == '/hinsta' or message.text == '/hinsta@CH_IG_FB_TK_SNAP_BOT':
+		bot.send_video(me.chat.id,snapchat,caption= "**ʰᵉˡˡᵒ ʷᵒʳˡᵈ ʷᵉˡˡᶜᵒᵐᵉ ᵗᵒ ᵐᵉᶰᵘ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /hsnap ᶠᵒʳ ʰᵘᶰᵗᵉʳ **\n**ˢᵉᶰᵈ /usnap ᵗᵒ ᶜʰᵉᶜᵏ ᵘˢᵉʳ ˢᶰᵃᵖᶜʰᵃᵗ**\n**ˢᵉᶰᵈ /start ᶠᵒʳ ᵇᵃᶜᵏ ᵗᵒ ʰᵒᵐᵉ ᵐᵉᶰᵘ**",parse_mode = "markdown")
+	elif me.text == '/hinsta' or me.text == '/hinsta@CH_IG_FB_TK_SNAP_BOT':
 		gm=0;ya=0;ot=0;ho=0;ao=0;mr=0;bad=0;hit=0;ins=0
 		while True:
 			tk = secrets.token_hex(8)*2
@@ -301,7 +301,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(me.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='hotmail.com':
 				email = email
 				user = user
@@ -329,7 +329,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(me.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='outlook.com':
 				email = email
 				user = user
@@ -357,7 +357,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(me.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='yahoo.com':
 				email = email
 				user = user
@@ -385,7 +385,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(me.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='mail.ru':
 				email = email
 				user = user
@@ -411,7 +411,7 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
+						bot.send_video(me.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")
 			elif (email.split('@')[1])=='aol.com':
 				email = email
 				user = user
@@ -440,18 +440,18 @@ def start(message):
 						followers = url.split('"followers" :"<li class="list__item">')[1].split('</li>"')[0]
 						following = url.split('"following" :"<li class="list__item">')[1].split('</li>"}')[0]
 						hacker =" https://t.me/z9oon/13"
-						bot.send_video(message.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")					
-#	elif message.text == '/cinsta' or message.text == '/cinsta@CH_IG_FB_TK_SNAP_BOT':
+						bot.send_video(me.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : **{}".format(email,user,name,bio,post,followers,following,copyright),parse_mode = "markdown")					
+#	elif me.text == '/cinsta' or me.text == '/cinsta@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/uinsta' or message.text == '/uinsta@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/uinsta' or me.text == '/uinsta@CH_IG_FB_TK_SNAP_BOT':
 
-	elif message.text == '/ginsta' or message.text == '/ginsta@CH_IG_FB_TK_SNAP_BOT':
+	elif me.text == '/ginsta' or me.text == '/ginsta@CH_IG_FB_TK_SNAP_BOT':
 		while True :
 			pro = requests.get('https://gimmeproxy.com/api/getProxy')
 			if '"protocol"' in pro.text or '"ip"' in pro.text or '"port"' in pro.text:
 				if str(pro.json()['protocol']) == 'socks5':
 					proxy = str(pro.json()['curl'])
-					bot.send_message(message.chat.id,"¶** جاري انشاء الحساب لطفا انتظر بعض ثواني ** : ",parse_mode = "markdown")
+					bot.send_message(me.chat.id,"¶** جاري انشاء الحساب لطفا انتظر بعض ثواني ** : ",parse_mode = "markdown")
 					uid = uuid4()
 					Coke=secrets.token_hex(8)*8
 					ssid = secrets.token_hex(8)*2
@@ -459,7 +459,7 @@ def start(message):
 					ERR = 0
 					rem = requests.get('https://10minutemail.net/address.api.php',headers = {'cookie':'PHPSESSID='+ssid},proxies={'socks5':proxy})
 					email = rem.json()['mail_get_mail']
-					bot.send_message(message.chat.id, '**Done Get Email : {}**'.format(email),parse_mode = "markdown")
+					bot.send_message(me.chat.id, '**Done Get Email : {}**'.format(email),parse_mode = "markdown")
 					num ="0123456789asdfghjklpoiuytrewqzxcvbnm"
 					rand=''.join(random.choice(num)for man in   range(8))
 					username='medo'+rand
@@ -473,7 +473,7 @@ def start(message):
 					req_attemp=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/attempt/',headers=head,data=data_attemp,proxies={'socks5':proxy})
 					req_age=requests.post(f'https://www.instagram.com/web/consent/check_age_eligibility/',headers=head,data=data_age,proxies={'socks5':proxy})
 					req_get_code=requests.post(f'https://i.instagram.com/api/v1/accounts/send_verify_email/',headers=head_get_code,data=data_get_code,proxies={'socks5':proxy})
-					bot.send_message(message.chat.id, '**GETING THE CODE ...... **',parse_mode = "markdown")
+					bot.send_message(me.chat.id, '**GETING THE CODE ...... **',parse_mode = "markdown")
 					sleep(15)
 					rei = requests.post('https://10minutemail.net/address.api.php',headers = {'cookie':'PHPSESSID='+ssid},proxies={'socks5':proxy}).text
 					code = rei.split(',"subject":"')[1].split(' is')[0]
@@ -482,55 +482,71 @@ def start(message):
 					singup_code=req_send_code.json()['signup_code']
 					data_crate={'email': email,'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:1589682409:{pas}','username': username,'first_name': 'By HIMA','month': '8','day': '27','year': '2002','client_id':uid,'seamless_login_enabled': '1','tos_version': 'row','force_sign_up_code': singup_code,}
 					req_crate=requests.post(f'https://www.instagram.com/accounts/web_create_ajax/',headers=head,data=data_crate,proxies={'socks5':proxy})
-					bot.send_message(message.chat.id, '**Done GrEaT AccOuNt :** `{}:{}`\n sessionid : `{}`'.format(email,pas,ssid),parse_mode = "markdown")
+					bot.send_message(me.chat.id, '**Done GrEaT AccOuNt :** `{}:{}`\n sessionid : `{}`'.format(email,pas,ssid),parse_mode = "markdown")
 				else:
-					bot.send_message(message.chat.id,"¶** خطأ في الخادم جاري احظار خادم شغال\n¶ ERORR PROXY SERCH IT **",parse_mode = "markdown")
+					bot.send_message(me.chat.id,"¶** خطأ في الخادم جاري احظار خادم شغال\n¶ ERORR PROXY SERCH IT **",parse_mode = "markdown")
 			else:
 				bot.send_message(message.chat.id, '**ERORR PROXY **',parse_mode = "markdown")
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif message.text == '/snap' or message.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
+#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
 		
 	else:
-		error = 'https://t.me/z9oon/6'
-		bot.send_video(message.chat.id,error, caption="الامر خاطئ ابدأ من جديد /start  🤍")
+			user = me.text
+			info = requests.get(f'https://mohammed-9.herokuapp.com/info.php?user={user}').json()
+			username = info['USERNAME']
+			id = info['ID']
+			name = info['NAME']
+			bio = info['BIO']
+			post = info['POSTS']
+			bio_link = info['BIO_LINK']
+			followers = info['FOLLOWERS']
+			following = info['FOLLOWING']
+			isp = info['PRIVATE']
+			ver = info['VERIFIED']
+			img = info['IMAGE_PROFILE']
+			lok = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
+			iok = lok.json()
+			date = str(iok['data'])
+			msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
+			bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
 
 
 
