@@ -526,7 +526,25 @@ def start(me):
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
 			user = str(me.text.split(':')[0])
-			info2 = requests.get(f'http://mohammed-9.herokuapp.com/tik.php?user={user}').content
+			info = requests.get(f'https://mohammed-9.herokuapp.com/info.php?user={user}').json()
+			username = info['USERNAME']
+			id = info['ID']
+			name = info['NAME']
+			bio = info['BIO']
+			post = info['POSTS']
+			bio_link = info['BIO_LINK']
+			followers = info['FOLLOWERS']
+			following = info['FOLLOWING']
+			isp = info['PRIVATE']
+			ver = info['VERIFIED']
+			img = info['IMAGE_PROFILE']
+			lok = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
+			iok = lok.json()
+			date = str(iok['data'])
+			msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
+			bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
+			user2 = str(me.text.split(':')[1])
+			info2 = requests.get(f'http://mohammed-9.herokuapp.com/tik.php?user={user2}').content
 			info3 = json.loads(info2)
 			user_i = info3['userInfo']['user']['uniqueId']
 			id = info3['userInfo']['user']['id']
@@ -535,12 +553,9 @@ def start(me):
 			following = info3['userInfo']['stats']['followingCount']
 			heart = info3['userInfo']['stats']['heartCount']
 			posts = info3['userInfo']['stats']['videoCount']
-			pr = info3['userInfo']['user']['avatarThumb']
-			tik = (f'`📽️INFO TIKTOK USER MOHAMMED\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹⌯ ɴᴀᴍᴇ » {name}\n🗿⌯ ᴜsᴇʀɴᴀᴍᴇ » {user_i}\n🚻⌯ ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸⌯ ғᴏʟʟᴏᴡɪɴɢ » {following}\n👍⌯ LIKES » {heart}\n📥⌯ ɪᴅ » {id}\n📽️⌯ vᴇɪᴅᴇᴏs » {posts}\n📫⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`❤️◔͜͡◔ ʙʏ » @MOHAMMED_ALMUSWI')
-			bot.send_photo(me.chat.id,pr,caption=tik,parse_mode = "markdown")
-
-
-
+			pr = info3['userInfo']['user']['avatarLarger']
+			MSG = (f'`📽️INFO TIKTOK USER MOHAMMED\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹⌯ ɴᴀᴍᴇ » {name}\n🗿⌯ ᴜsᴇʀɴᴀᴍᴇ » {user_i}\n🚻⌯ ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸⌯ ғᴏʟʟᴏᴡɪɴɢ » {following}\n👍⌯ LIKES » {heart}\n📥⌯ ɪᴅ » {id}\n📽️⌯ vᴇɪᴅᴇᴏs » {posts}\n📫⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`❤️◔͜͡◔ ʙʏ » @MOHAMMED_ALMUSWI')
+			bot.send_photo(me.chat.id,pr,caption=MSG,parse_mode = "markdown")
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
