@@ -554,8 +554,7 @@ def start(me):
 			heart = info3['userInfo']['stats']['heartCount']
 			posts = info3['userInfo']['stats']['videoCount']
 			pr = info3['userInfo']['user']['avatarLarger']
-			MSG = (f'`📽️INFO TIKTOK USER MOHAMMED\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹⌯ ɴᴀᴍᴇ » {name}\n🗿⌯ ᴜsᴇʀɴᴀᴍᴇ » {user_i}\n🚻⌯ ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸⌯ ғᴏʟʟᴏᴡɪɴɢ » {following}\n👍⌯ LIKES » {heart}\n📥⌯ ɪᴅ » {id}\n📽️⌯ vᴇɪᴅᴇᴏs » {posts}\n📫⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`❤️◔͜͡◔ ʙʏ » @MOHAMMED_ALMUSWI')
-			bot.send_photo(me.chat.id,pr,caption=MSG,parse_mode = "markdown")
+			bot.send_photo(me.chat.id,pr,caption=f'📽**️INFO TIKTOK USER MOHAMMED**\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹⌯ ɴᴀᴍᴇ » `{name}`\n🗿⌯ ᴜsᴇʀɴᴀᴍᴇ » `{user_i}`\n🚻⌯ ғᴏʟʟᴏᴡᴇʀs » `{followers}`\n🚸⌯ ғᴏʟʟᴏᴡɪɴɢ » `{following}`\n👍⌯ LIKES » `{heart}`\n📥⌯ ɪᴅ » `{id}`\n📽️⌯ vᴇɪᴅᴇᴏs » {posts}\n📫⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n❤️◔͜͡◔ ʙʏ » **@MOHAMMED_ALMUSWI**',parse_mode="markdown")
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
