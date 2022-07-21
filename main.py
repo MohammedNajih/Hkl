@@ -525,7 +525,8 @@ def start(me):
 
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
-			user = me.text
+			
+			user = str(me.text.split(':')[0])
 			info = requests.get(f'https://mohammed-9.herokuapp.com/info.php?user={user}').json()
 			username = info['USERNAME']
 			id = info['ID']
@@ -543,7 +544,7 @@ def start(me):
 			date = str(iok['data'])
 			msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
 			bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
-			user2 = str(me.text.split('user=')[1])
+			user2 = str(me.text.split(':')[1])
 			info = requests.get('http://mohammed-9.herokuapp.com/tik.php?user='+user2).json()
 			user_i = info['userInfo']['user']['uniqueId']
 			id = info['userInfo']['user']['id']
