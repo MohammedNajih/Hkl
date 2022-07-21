@@ -525,9 +525,31 @@ def start(me):
 
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 
-#	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
-
-		
+	elif 'user=' in me.text:
+		user = str(me.text.split('user=')[1])
+		info = requests.get('http://mohammed-9.herokuapp.com/tik.php?user='+user).json()
+		user_i = info['userInfo']['user']['uniqueId']
+		id = info['userInfo']['user']['id']
+		name = info['userInfo']['user']['nickname']
+		followers = info['userInfo']['stats']['followerCount']
+		following = info['userInfo']['stats']['followingCount']
+		heart = info['userInfo']['stats']['heartCount']
+		posts = info['userInfo']['stats']['videoCount']
+		pr = info['userInfo']['user']['avatarThumb']
+		MSG = (f"""
+INFO TIKTOK USER MOHAMMED
+• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •
+⌯ ɴᴀᴍᴇ » {name}
+⌯ ᴜsᴇʀɴᴀᴍᴇ » {user_i}
+⌯ ғᴏʟʟᴏᴡᴇʀs » {followers}
+⌯ ғᴏʟʟᴏᴡɪɴɢ » {following}
+⌯ LIKES » {heart}
+⌯ ɪᴅ » {id}
+⌯ vᴇɪᴅᴇᴏs » {posts}
+⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}
+• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •
+◔͜͡◔ ʙʏ » @MOHAMMED_ALMUSWI""")
+		bot.send_photo(me.chat.id,pr,caption=MSG,parse_mode = "markdown")
 	else:
 			user = me.text
 			info = requests.get(f'https://mohammed-9.herokuapp.com/info.php?user={user}').json()
