@@ -536,7 +536,7 @@ def start(me):
 			posts = info['userInfo']['stats']['videoCount']
 			pr = info['userInfo']['user']['avatarThumb']
 			MSG = (f'`📽️INFO TIKTOK USER MOHAMMED\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹⌯ ɴᴀᴍᴇ » {name}\n🗿⌯ ᴜsᴇʀɴᴀᴍᴇ » {user_i}\n🚻⌯ ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸⌯ ғᴏʟʟᴏᴡɪɴɢ » {following}\n👍⌯ LIKES » {heart}\n📥⌯ ɪᴅ » {id}\n📽️⌯ vᴇɪᴅᴇᴏs » {posts}\n📫⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`❤️◔͜͡◔ ʙʏ » @MOHAMMED_ALMUSWI')
-			bot.send_photo(me.chat.id,pr,caption=MSG,parse_mode = "markdown")
+			bot.send_message(me.chat.id,text=MSG,parse_mode = "markdown")
 
 
 
