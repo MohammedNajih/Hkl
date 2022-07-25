@@ -1,5 +1,7 @@
 import requests,user_agent,json,flask,telebot,random,os,sys,secrets,names,urllib
 import telebot
+import gdolib
+from gdolib import *
 from telebot import types
 from user_agent import generate_user_agent
 import logging
@@ -526,6 +528,9 @@ def start(me):
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
 			user = str(me.text.split(':')[0])
+			ba = me.text
+			id = gdo_drow.id_post(ba)
+			bot.send_message(me.chat.id,text=id)
 			info = requests.get(f'https://mohammed-9.herokuapp.com/info.php?user={user}').json()
 			username = info['USERNAME']
 			id = info['ID']
@@ -553,8 +558,12 @@ def start(me):
 			following = info3['userInfo']['stats']['followingCount']
 			heart = info3['userInfo']['stats']['heartCount']
 			posts = info3['userInfo']['stats']['videoCount']
-			pr = info3['userInfo']['user']['avatarLarger']
-			bot.send_photo(me.chat.id,pr,caption=f'📽**️INFO TIKTOK USER MOHAMMED**\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹⌯ ɴᴀᴍᴇ » `{name}`\n🗿⌯ ᴜsᴇʀɴᴀᴍᴇ » `{user_i}`\n🚻⌯ ғᴏʟʟᴏᴡᴇʀs » `{followers}`\n🚸⌯ ғᴏʟʟᴏᴡɪɴɢ » `{following}`\n👍⌯ LIKES » `{heart}`\n📥⌯ ɪᴅ » `{id}`\n📽️⌯ vᴇɪᴅᴇᴏs » {posts}\n📫⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n❤️◔͜͡◔ ʙʏ » **@MOHAMMED_ALMUSWI**',parse_mode="markdown")
+			pr = info3['userInfo']['user']['avatarThumb']
+			MSG = (f'`📽️INFO TIKTOK USER MOHAMMED\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹⌯ ɴᴀᴍᴇ » {name}\n🗿⌯ ᴜsᴇʀɴᴀᴍᴇ » {user_i}\n🚻⌯ ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸⌯ ғᴏʟʟᴏᴡɪɴɢ » {following}\n👍⌯ LIKES » {heart}\n📥⌯ ɪᴅ » {id}\n📽️⌯ vᴇɪᴅᴇᴏs » {posts}\n📫⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`❤️◔͜͡◔ ʙʏ » @MOHAMMED_ALMUSWI')
+			bot.send_photo(me.chat.id,pr,caption=MSG,parse_mode = "markdown")
+
+
+
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
