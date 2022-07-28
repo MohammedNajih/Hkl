@@ -1,7 +1,5 @@
 import requests,user_agent,json,flask,telebot,random,os,sys,secrets,names,urllib
 import telebot
-import gdolib
-from gdolib import *
 from telebot import types
 from user_agent import generate_user_agent
 import logging
@@ -528,7 +526,9 @@ def start(me):
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
 			user = str(me.text.split(':')[0])
-			info = requests.get(f'https://mohammed-9.herokuapp.com/info.php?user={user}').json()
+			user2 = str(me.text.split(':')[1])
+			req = requests.get(f'https://mohammed-9.herokuapp.com/users.php?user1={user}&{user2}').json()
+			info = req['results']['instagram']
 			username = info['USERNAME']
 			id = info['ID']
 			name = info['NAME']
@@ -544,20 +544,20 @@ def start(me):
 			iok = lok.json()
 			date = str(iok['data'])
 			msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
+			info2 = req['results']['tiktok']
+			iddd = info2['ID']
+			usr = info2['USERNAME']
+			nam2 = info2['NAME']
+			bio2 = info2['BIO']
+			tik = info2['IMAGE']
+			vert = info2['VERIFIED']
+			fols = info2['FOLLOWERS']
+			fole = info2['FOLLOWING']
+			pst = info2['POATS']
+			like = info2['HEARTS']
+			msgo = msge =(f'`💕 INFO TIKTOK ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {nam2}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {usr}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {fols}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {fole}\n❤️ HEARTS » {like}\n🗿 ɪᴅ » {iddd}\n📫 ᴘᴏsᴛs » {pst}\n📥 verified » {vert}\n📈 ʙɪᴏ » {bio2}\n📊 𝙻𝙸𝙽𝚔 » https://www.tiktok.com.com/@{user2}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
 			bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
-			user2 = str(me.text.split(':')[1])
-			info2 = requests.get(f'http://mohammed-9.herokuapp.com/tik.php?user={user2}').content
-			info3 = json.loads(info2)
-			user_i = info3['userInfo']['user']['uniqueId']
-			id = info3['userInfo']['user']['id']
-			name = info3['userInfo']['user']['nickname']
-			followers = info3['userInfo']['stats']['followerCount']
-			following = info3['userInfo']['stats']['followingCount']
-			heart = info3['userInfo']['stats']['heartCount']
-			posts = info3['userInfo']['stats']['videoCount']
-			pr = info3['userInfo']['user']['avatarThumb']
-			MSG = (f'`📽️INFO TIKTOK USER MOHAMMED\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹⌯ ɴᴀᴍᴇ » {name}\n🗿⌯ ᴜsᴇʀɴᴀᴍᴇ » {user_i}\n🚻⌯ ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸⌯ ғᴏʟʟᴏᴡɪɴɢ » {following}\n👍⌯ LIKES » {heart}\n📥⌯ ɪᴅ » {id}\n📽️⌯ vᴇɪᴅᴇᴏs » {posts}\n📫⌯ 𝙻𝙸𝙽𝚔 » www.tiktok.com/{user_i}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`❤️◔͜͡◔ ʙʏ » @MOHAMMED_ALMUSWI')
-			bot.send_photo(me.chat.id,pr,caption=MSG,parse_mode = "markdown")
+			bot.send_photo(me.chat.id,tik,caption=msge,parse_mode = "markdown")
 
 
 
