@@ -544,6 +544,7 @@ def start(me):
 			iok = lok.json()
 			date = str(iok['data'])
 			msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
+			bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
 			info2 = req['results']['tiktok']
 			iddd = info2['ID']
 			usr = info2['USERNAME']
@@ -555,8 +556,7 @@ def start(me):
 			fole = info2['FOLLOWING']
 			pst = info2['POATS']
 			like = info2['HEARTS']
-			msgo = msge =(f'`💕 INFO TIKTOK ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {nam2}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {usr}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {fols}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {fole}\n❤️ HEARTS » {like}\n🗿 ɪᴅ » {iddd}\n📫 ᴘᴏsᴛs » {pst}\n📥 verified » {vert}\n📈 ʙɪᴏ » {bio2}\n📊 𝙻𝙸𝙽𝚔 » https://www.tiktok.com.com/@{user2}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
-			bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
+			msgo = (f'`💕 INFO TIKTOK ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {nam2}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {usr}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {fols}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {fole}\n❤️ HEARTS » {like}\n🗿 ɪᴅ » {iddd}\n📫 ᴘᴏsᴛs » {pst}\n📥 verified » {vert}\n📈 ʙɪᴏ » {bio2}\n📊 𝙻𝙸𝙽𝚔 » https://www.tiktok.com.com/@{user2}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
 			bot.send_photo(me.chat.id,tik,caption=msgo,parse_mode = "markdown")
 
 
