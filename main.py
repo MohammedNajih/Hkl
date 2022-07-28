@@ -528,9 +528,6 @@ def start(me):
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
 			user = str(me.text.split(':')[0])
-			ba = me.text
-			id = gdo_drow.id_post(ba)
-			bot.send_message(me.chat.id,text=id)
 			info = requests.get(f'https://mohammed-9.herokuapp.com/info.php?user={user}').json()
 			username = info['USERNAME']
 			id = info['ID']
