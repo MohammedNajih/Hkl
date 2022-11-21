@@ -563,6 +563,12 @@ def start(me):
 				card = me.text.split('/chk ')[1]
 				soon = '\n قريبا سيتم وضع قسم لفحص الباطقات اعتذر جذا لفحص هذه البطاقه'
 				bot.send_message(me.chat.id,text=soon+card,parse_mode = "markdown")
+			elif '/comand' in me.text:
+				mess = '/chk to cheack card in stripe \nsend me user instagram example user:\n/ginsta great instagram accounts used proxy \n/start more fuction'
+				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
+			else:
+				mess = 'please send me /comand or /start 😋'
+				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
 
 
 
