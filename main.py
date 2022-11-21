@@ -561,7 +561,7 @@ def start(me):
 				bot.send_photo(me.chat.id,tik,caption=mtik,parse_mode = "markdown")
 			elif '/chk' in me.text:
 				card = me.text.split('/chk ')[1]
-				soon = '\n قريبا سيتم وضع قسم لفحص الباطقات اعتذر جذا لفحص هذه البطاقه')
+				soon = '\n قريبا سيتم وضع قسم لفحص الباطقات اعتذر جذا لفحص هذه البطاقه'
 				bot.send_message(me.chat.id,text=soon+card,parse_mode = "markdown")
 
 
