@@ -526,6 +526,7 @@ def start(me):
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
 			user = str(me.text)
+			bot.edit_message(me.chat.id,text=me.text,parse_mode = "markdown")
 			req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}').json()
 			info = req['results']['instagram']
 			username = info['USERNAME']
