@@ -525,10 +525,9 @@ def start(me):
 
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
-			user = str(me.text.split(':')[0])
-			user2 = str(me.text.split(':')[1])
-			req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}&user2={user2}')
-			info = json.loads(req.content)['results']['instagram']
+			user = str(me.text)
+			req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}').json()
+			info = req['results']['instagram']
 			username = info['USERNAME']
 			id = info['ID']
 			name = info['NAME']
@@ -545,25 +544,8 @@ def start(me):
 			date = str(iok['data'])
 			msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`')
 			bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
-			if json.loads(req.content)['results']['tiktok']['NAME']==None:
-				bot.send_message(me.chat.id,text='tiktok is respond valid',parse_mode = "markdown")
-			else:
-				info2 = json.loads(req.content)['results']['tiktok']
-				iddd = info2['ID']
-				usr = info2['USERNAME']
-				nam2 = info2['NAME']
-				bio2 = info2['BIO']
-				tik = info2['IMAGE']
-				vert = info2['VERIFIED']
-				fols = info2['FOLLOWERS']
-				fole = info2['FOLLOWING']
-				pst = info2['POATS']
-				like = info2['HEARTS']
-				mtik = (f'`💕 INFO TIKTOK ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {nam2}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {usr}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {fols}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {fole}\n❤️ HEARTS » {like}\n🗿 ɪᴅ » {iddd}\n📫 ᴘᴏsᴛs » {pst}\n📥 verified » {vert}\n📈 ʙɪᴏ » {bio2}\n📊 𝙻𝙸𝙽𝚔 » https://www.tiktok.com.com/@{user2}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
-				bot.send_photo(me.chat.id,tik,caption=mtik,parse_mode = "markdown")
-
-
-
+			
+			
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
