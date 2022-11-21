@@ -548,7 +548,7 @@ def start(me):
 			elif json.loads(req.content)['results']['tiktok']['NAME']==None:
 				bot.send_message(me.chat.id,text='tiktok is respond valid',parse_mode = "markdown")
 			else:
-				info2 = req['results']['tiktok']
+				info2 = json.loads(req.content)['results']['tiktok']
 				iddd = info2['ID']
 				usr = info2['USERNAME']
 				nam2 = info2['NAME']
