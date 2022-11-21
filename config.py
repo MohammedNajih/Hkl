@@ -1,2 +1,2 @@
-BOT_TOKEN = "5451586165:AAHW7SYz4G5w8EZYhUtNY_jdhxLPAzKIrx8"
-APP_URL = "https://php-sot.herokuapp.com/" + BOT_TOKEN
+BOT_TOKEN = "5734388256:AAFh-F14Tw-lqpoJC0df6ilUYVWqKzLZeNA"
+APP_URL = "https://mohammed-almuswi.herokuapp.com/" + BOT_TOKEN
