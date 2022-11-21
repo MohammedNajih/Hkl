@@ -525,40 +525,45 @@ def start(me):
 
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
-			user = str(me.text.split(':')[0])
-			user2 = str(me.text.split(':')[1])
-			req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}&user2={user2}').json()
-			info = req['results']['instagram']
-			username = info['USERNAME']
-			id = info['ID']
-			name = info['NAME']
-			bio = info['BIO']
-			post = info['POSTS']
-			bio_link = info['BIO_LINK']
-			followers = info['FOLLOWERS']
-			following = info['FOLLOWING']
-			isp = info['PRIVATE']
-			ver = info['VERIFIED']
-			img = info['IMAGE_PROFILE']
-			lok = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
-			iok = lok.json()
-			date = str(iok['date'])
-			msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`')
-			bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
-			info2 = req['results']['tiktok']
-			iddd = info2['ID']
-			usr = info2['USERNAME']
-			nam2 = info2['NAME']
-			bio2 = info2['BIO']
-			tik = info2['IMAGE']
-			vert = info2['VERIFIED']
-			fols = info2['FOLLOWERS']
-			fole = info2['FOLLOWING']
-			pst = info2['POATS']
-			like = info2['HEARTS']
-			mtik = (f'`💕 INFO TIKTOK ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {nam2}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {usr}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {fols}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {fole}\n❤️ HEARTS » {like}\n🗿 ɪᴅ » {iddd}\n📫 ᴘᴏsᴛs » {pst}\n📥 verified » {vert}\n📈 ʙɪᴏ » {bio2}\n📊 𝙻𝙸𝙽𝚔 » https://www.tiktok.com.com/@{user2}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
-			bot.send_photo(me.chat.id,tik,caption=mtik,parse_mode = "markdown")
-
+			mess = str(me.text)
+			if (':') in mess:
+				user = str(me.text.split(':')[0])
+				user2 = str(me.text.split(':')[1])
+				req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}&user2={user2}').json()
+				info = req['results']['instagram']
+				username = info['USERNAME']
+				id = info['ID']
+				name = info['NAME']
+				bio = info['BIO']
+				post = info['POSTS']
+				bio_link = info['BIO_LINK']
+				followers = info['FOLLOWERS']
+				following = info['FOLLOWING']
+				isp = info['PRIVATE']
+				ver = info['VERIFIED']
+				img = info['IMAGE_PROFILE']
+				lok = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
+				iok = lok.json()
+				date = str(iok['date'])
+				msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`')
+				bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
+				info2 = req['results']['tiktok']
+				iddd = info2['ID']
+				usr = info2['USERNAME']
+				nam2 = info2['NAME']
+				bio2 = info2['BIO']
+				tik = info2['IMAGE']
+				vert = info2['VERIFIED']
+				fols = info2['FOLLOWERS']
+				fole = info2['FOLLOWING']
+				pst = info2['POATS']
+				like = info2['HEARTS']
+				mtik = (f'`💕 INFO TIKTOK ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {nam2}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {usr}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {fols}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {fole}\n❤️ HEARTS » {like}\n🗿 ɪᴅ » {iddd}\n📫 ᴘᴏsᴛs » {pst}\n📥 verified » {vert}\n📈 ʙɪᴏ » {bio2}\n📊 𝙻𝙸𝙽𝚔 » https://www.tiktok.com.com/@{user2}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
+				bot.send_photo(me.chat.id,tik,caption=mtik,parse_mode = "markdown")
+			elif '/chk' in mess:
+				card = mess.split('/chk ')[1]
+				soon = '\n قريبا سيتم وضع قسم لفحص الباطقات اعتذر جذا لفحص هذه البطاقه')
+				bot.send_message(me.chat.id,text=soon+card,parse_mode = "markdown")
 
 
 
