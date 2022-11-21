@@ -525,8 +525,7 @@ def start(me):
 
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
-			mess = str(me.text)
-			if (':') in mess:
+			if ':' in me.text:
 				user = str(me.text.split(':')[0])
 				user2 = str(me.text.split(':')[1])
 				req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}&user2={user2}').json()
@@ -560,8 +559,8 @@ def start(me):
 				like = info2['HEARTS']
 				mtik = (f'`💕 INFO TIKTOK ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {nam2}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {usr}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {fols}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {fole}\n❤️ HEARTS » {like}\n🗿 ɪᴅ » {iddd}\n📫 ᴘᴏsᴛs » {pst}\n📥 verified » {vert}\n📈 ʙɪᴏ » {bio2}\n📊 𝙻𝙸𝙽𝚔 » https://www.tiktok.com.com/@{user2}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n◔͜͡◔ ʙʏ » @Mohammed_Almuswi @onclik`')
 				bot.send_photo(me.chat.id,tik,caption=mtik,parse_mode = "markdown")
-			elif '/chk' in mess:
-				card = mess.split('/chk ')[1]
+			elif '/chk' in me.text:
+				card = me.text.split('/chk ')[1]
 				soon = '\n قريبا سيتم وضع قسم لفحص الباطقات اعتذر جذا لفحص هذه البطاقه')
 				bot.send_message(me.chat.id,text=soon+card,parse_mode = "markdown")
 
