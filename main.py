@@ -527,7 +527,7 @@ def start(me):
 	else:
 			user = str(me.text.split(':')[0])
 			user2 = str(me.text.split(':')[1])
-			req = requests.get(f'https://mohammed-9.herokuapp.com/users.php?user1={user}&user2={user2}').json()
+			req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}&user2={user2}').json()
 			info = req['results']['instagram']
 			username = info['USERNAME']
 			id = info['ID']
@@ -571,5 +571,5 @@ def redirect_message():
 
 if __name__ == "__main__":
 	bot.remove_webhook()
-	bot.set_webhook(url="https://php-sot.herokuapp.com/"+str(BOT_TOKEN))
+	bot.set_webhook(url="https://mohammed-almuswi.herokuapp.com/"+str(BOT_TOKEN))
 	server.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
