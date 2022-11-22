@@ -541,10 +541,12 @@ def start(me):
 				isp = info['PRIVATE']
 				ver = info['VERIFIED']
 				img = info['IMAGE_PROFILE']
+				phone =info['PHONE']
+				email = info['EMAIL']
 				lok = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
 				iok = lok.json()
 				date = str(iok['date'])
-				msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`')
+				msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\nᴱᴹᴬᴵᴸ » {email}\nᴾᴴᴼᴺᴱ ᴺᵁᴹᴮᴱᴿ » {phone}🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`')
 				bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
 				info2 = req['results']['tiktok']
 				iddd = info2['ID']
