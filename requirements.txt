@@ -5,7 +5,6 @@ requests
 uuid
 names
 faker
-gdolib
 urllib3
 mechanize
 instaloader
