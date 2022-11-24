@@ -525,9 +525,10 @@ def start(me):
 
 #	elif me.text == '/snap' or me.text == '/snap@CH_IG_FB_TK_SNAP_BOT':
 	else:
-			if ':' in me.text:
-				user = str(me.text.split(':')[0])
-				user2 = str(me.text.split(':')[1])
+			if '/info' in me.text:
+				mess = me.text.split('/info ')[1]
+				user = str(mess.split(':')[0])
+				user2 = str(mess.split(':')[1])
 				req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}&user2={user2}').json()
 				info = req['results']['instagram']
 				username = info['USERNAME']
