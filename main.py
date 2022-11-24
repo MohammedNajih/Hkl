@@ -580,6 +580,8 @@ def start(me):
 					bot.send_message(me.chat.id,text='جاريي التحميل', parse_mode =" markdown")
 					dw = req.split('video controls src="')[1].split('"')[0]
 					bot.send_video(me.chat.id,dw,caption='`Download By Mohammed Almuswi`',parse_mode = "markdown")
+				else:
+					bot.send_message(me.chat.id,text='LINK DOWNLOAD IS BAND',parse_mode="markdown")
 			else:
 				mess = 'please send me /comand or /start 😋'
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
