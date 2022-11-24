@@ -577,8 +577,9 @@ def start(me):
 				data = f'url={link}'
 				req = requests.post(url,headers=headers,data=data).text
 				if ('<div class="meta-video"> <video controls src="') in req:
+					bot.send_message(me.chat.id,text='جاريي التحميل', parse_mode =" markdown")
 					dw = req.split('video controls src="')[1].split('"')[0]
-					bot.send_video(me.chat.id,dw,caption='Download By Mohammed Almuswi',parse_mode = "markdown")
+					bot.send_video(me.chat.id,dw,caption='`Download By Mohammed Almuswi`',parse_mode = "markdown")
 			else:
 				mess = 'please send me /comand or /start 😋'
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
