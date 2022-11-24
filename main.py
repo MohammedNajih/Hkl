@@ -571,10 +571,10 @@ def start(me):
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
 			elif '/dp' in me.text:
 				mess = me.text.split('/dp ')[1]
-				link = urllib.parse.quote(mess)
+				#link = urllib.parse.quote(mess)
 				url = 'https://pinterestdownloader.com/'
-				headers = {'Host':'pinterestdownloader.com','content-length':'90','cache-control':'max-age=0','sec-ch-ua':'"Chromium";v="107", "Not=A?Brand";v="24"','sec-ch-ua-mobile':'?1','sec-ch-ua-platform':'"Android"','upgrade-insecure-requests':'1','origin':'https://pinterestdownloader.com','content-type':'application/x-www-form-urlencoded','user-agent':'Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36','accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site':'same-origin','sec-fetch-mode':'navigate','sec-fetch-dest':'document','referer':'https://pinterestdownloader.com/','accept-encoding':'gzip, deflate','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'_ga=GA1.2.1213132509.1666060402','cookie':'__gads=ID=35108d08890f77eb-225cbfe949ce0017:T=1666060402:RT=1666060402:S=ALNI_MY8rJoyGUjkji3UBt7aYHzIXn65hw','cookie':'__gpi=UID=00000b749a6c9953:T=1666060402:RT=1666753599:S=ALNI_MbbEInKdqABsGOhxdqrcbvfq9ZCgg','cookie':'__cf_bm=lQbVMQPVEIiEf8gLakRgILt8SNudD88gE.fUqdn4xwo-1669296833-0-AY4O/YZR241oznSaLf1JZ76n3tsTpsiEzbSO8Pc4dXtMW5dhbU721BV7lkQybm1ABt4unBdH6uU4haUQ/Yimb3Jql5g5CNRlWlNSa4q/7eN8Mpn/G+9P+EHSpucSaJTl7DA/gKxYXpzue1h/Iz3IBTw='}
-				data = f'url={link}'
+				headers={'Host':'pinterestdownloader.com','content-length':'90','cache-control':'max-age=0','sec-ch-ua':'"Chromium";v="107", "Not=A?Brand";v="24"','sec-ch-ua-mobile':'?1','sec-ch-ua-platform':'"Android"','upgrade-insecure-requests':'1','origin':'https://pinterestdownloader.com','content-type':'application/x-www-form-urlencoded','user-agent':'Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36','accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site':'same-origin','sec-fetch-mode':'navigate','sec-fetch-dest':'document','referer':'https://pinterestdownloader.com/','accept-encoding':'gzip, deflate','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5'}
+				data= {'url': mess}
 				req = requests.post(url,headers=headers,data=data).text
 				if ('<div class="meta-video"> <video controls src="') in req:
 					bot.send_message(me.chat.id,text='جاريي التحميل', parse_mode =" markdown")
