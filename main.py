@@ -569,10 +569,10 @@ def start(me):
 			elif '/comand' in me.text:
 				mess = '/chk to cheack card in stripe \nsend me user instagram example user:\n/ginsta great instagram accounts used proxy \n/start more fuction'
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
-			elif '/dp' in me.text:
-				mess = me.text.split('/dp ')[1]
-				link = requests.get(f'https://iraqpy.com/do.php?link={mess}').text
-				bot.send_video(me.chat.id,link,caption='Done..',parse_mode="markdown")
+			elif 'https://pin' in me.text:
+				link = requests.get(f'https://iraqpy.com/do.php?link={me.text}').text
+				http = str(link)
+				bot.send_video(me.chat.id,http,caption=http,parse_mode="markdown")
 			else:
 				mess = 'please send me /comand or /start 😋'
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
