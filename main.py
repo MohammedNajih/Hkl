@@ -23,8 +23,8 @@ def boten(message):
 	W = types.InlineKeyboardButton(text ="Twitter", callback_data="F5")
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,F,T,S,W,M)
-	logo = 'https://t.me/z9oon/7'
-	bot.send_video(message.chat.id,'https://v.pinimg.com/videos/mc/720p/5e/54/07/5e54074b3eb3446134d9605d4242bfe5.mp4')
+	logo = 'https://v.pinimg.com/videos/mc/720p/5e/54/07/5e54074b3eb3446134d9605d4242bfe5.mp4'
+	#bot.send_video(message.chat.id,'https://v.pinimg.com/videos/mc/720p/5e/54/07/5e54074b3eb3446134d9605d4242bfe5.mp4')
 	bot.send_video(message.chat.id,logo, caption=" Welcome to My Bot Fuction All Websites ",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
