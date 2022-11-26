@@ -24,6 +24,7 @@ def boten(message):
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,F,T,S,W,M)
 	logo = 'https://t.me/z9oon/7'
+	bot.send_video(message.chat.id,'https://v.pinimg.com/videos/mc/720p/5e/54/07/5e54074b3eb3446134d9605d4242bfe5.mp4')
 	bot.send_video(message.chat.id,logo, caption=" Welcome to My Bot Fuction All Websites ",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
@@ -569,13 +570,13 @@ def start(me):
 			elif '/comand' in me.text:
 				mess = '/chk to cheack card in stripe \nsend me user instagram example user:\n/ginsta great instagram accounts used proxy \n/start more fuction'
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
-			elif '/dp' in me.text:
-				mess = me.text.split('/dp ')[1]
-				bot.send_video(me.chat.id,'https://dl.pinterestdownloader.com/?source=pinterest&url=https://v.pinimg.com/videos/mc/720p/5e/54/07/5e54074b3eb3446134d9605d4242bfe5.mp4',caption='Download By Mohammed Almuswi',parse_mode = "markdown")
+			#elif '/dp' in me.text:
+				#mess = me.text.split('/dp ')[1]
+				#bot.send_video(me.chat.id,'https://v.pinimg.com/videos/mc/720p/5e/54/07/5e54074b3eb3446134d9605d4242bfe5.mp4',caption='Download By Mohammed Almuswi',parse_mode = "markdown")
 				#link = urllib.parse.quote(mess)
-				url = 'https://iraqpy.com/do.php?link='+mess
-				req = requests.get(url).text
-				bot.send_video(me.chat.id,req,caption='`Download By Mohammed Almuswi`',parse_mode = "markdown")
+				#url = 'https://iraqpy.com/do.php?link='+mess
+				#req = requests.get(url).text
+				#bot.send_video(me.chat.id,req,caption='`Download By Mohammed Almuswi`',parse_mode = "markdown")
 				else:
 					bot.send_message(me.chat.id,text='LINK DOWNLOAD IS BAND',parse_mode="markdown")
 			else:
