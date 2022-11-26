@@ -573,7 +573,7 @@ def start(me):
 				mess = me.text.split('/dp ')[1]
 				#link = urllib.parse.quote(mess)
 				url = 'https://iraqpy.com/do.php?link='+mess
-				req = requests.post(url,headers=headers,data=data).text
+				req = requests.get(url).text
 				dw = req
 				bot.send_video(me.chat.id,dw,caption='`Download By Mohammed Almuswi`',parse_mode = "markdown")
 				else:
