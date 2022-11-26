@@ -571,11 +571,11 @@ def start(me):
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
 			elif '/dp' in me.text:
 				mess = me.text.split('/dp ')[1]
+				bot.send_video(me.chat.id,'https://v.pinimg.com/videos/mc/720p/5e/54/07/5e54074b3eb3446134d9605d4242bfe5.mp4',caption='Download By Mohammed Almuswi',parse_mode = "markdown")
 				#link = urllib.parse.quote(mess)
 				url = 'https://iraqpy.com/do.php?link='+mess
 				req = requests.get(url).text
-				dw = req
-				bot.send_video(me.chat.id,dw,caption='`Download By Mohammed Almuswi`',parse_mode = "markdown")
+				bot.send_video(me.chat.id,req,caption='`Download By Mohammed Almuswi`',parse_mode = "markdown")
 				else:
 					bot.send_message(me.chat.id,text='LINK DOWNLOAD IS BAND',parse_mode="markdown")
 			else:
