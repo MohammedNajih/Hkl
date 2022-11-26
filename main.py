@@ -23,7 +23,7 @@ def boten(message):
 	W = types.InlineKeyboardButton(text ="Twitter", callback_data="F5")
 	M = types.InlineKeyboardButton('DEVELOPER', url='https://t.me/ONCLIK')
 	mas.add(I,F,T,S,W,M)
-	logo = 'https://v.pinimg.com/videos/mc/720p/5e/54/07/5e54074b3eb3446134d9605d4242bfe5.mp4'
+	logo = 'https://t.me/z9oon/7'
 	bot.send_video(message.chat.id,logo, caption=" Welcome to My Bot Fuction All Websites ",reply_markup=mas)
 
 @bot.callback_query_handler(func=lambda call: True)
@@ -571,17 +571,8 @@ def start(me):
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
 			elif '/dp' in me.text:
 				mess = me.text.split('/dp ')[1]
-				#link = urllib.parse.quote(mess)
-				url = 'https://pinterestdownloader.com/'
-				headers={'Host':'pinterestdownloader.com','content-length':'90','cache-control':'max-age=0','sec-ch-ua':'"Chromium";v="107", "Not=A?Brand";v="24"','sec-ch-ua-mobile':'?1','sec-ch-ua-platform':'"Android"','upgrade-insecure-requests':'1','origin':'https://pinterestdownloader.com','content-type':'application/x-www-form-urlencoded','user-agent':'Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36','accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site':'same-origin','sec-fetch-mode':'navigate','sec-fetch-dest':'document','referer':'https://pinterestdownloader.com/','accept-encoding':'gzip, deflate','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5'}
-				data= {'url': mess}
-				req = requests.post(url,headers=headers,data=data).text
-				if ('<div class="meta-video"> <video controls src="') in req:
-					bot.send_message(me.chat.id,text='جاريي التحميل', parse_mode =" markdown")
-					dw = req.split('video controls src="')[1].split('"')[0]
-					bot.send_video(me.chat.id,dw,caption='`Download By Mohammed Almuswi`',parse_mode = "markdown")
-				else:
-					bot.send_message(me.chat.id,text='LINK DOWNLOAD IS BAND',parse_mode="markdown")
+				link = requests.get(f'https://iraqpy.com/do.php?link={mess}').text
+				bot.send_video(me.chat.id,link,caption='Done..',parse_mode="markdown")
 			else:
 				mess = 'please send me /comand or /start 😋'
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
