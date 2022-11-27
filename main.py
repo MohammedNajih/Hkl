@@ -626,6 +626,8 @@ def start(me):
 											bot.send_message(me.chat.id, text=email+' Not linked instagram', parse_mode="markdown")
 									else:
 										bot.send_message(me.chat.id,text=email+' Not linked Gmail', parse_mode="markdown") 
+							else:
+									bot.send_message(me.chat.id,text='Emaill Erore',parse_mode = "markdown")
 											
 			#elif '/Instagram_yahoo'==me.text:
 				
