@@ -566,7 +566,7 @@ def start(me):
 				card = me.text.split('/chk ')[1]
 				soon = '\n قريبا سيتم وضع قسم لفحص الباطقات اعتذر جذا لفحص هذه البطاقه'
 				bot.send_message(me.chat.id,text=soon+card,parse_mode = "markdown")
-			elif '/Instagram_gmail'==me.text:
+			elif me.text == '/Instagram_gmail':
 						gm=0;ya=0;ot=0;ho=0;ao=0;mr=0;bad=0;hit=0;ins=0
 						while True:
 							tk = secrets.token_hex(8)*2
@@ -622,27 +622,27 @@ def start(me):
 											hacker ="https://t.me/z9oon/13"
 											bot.send_video(me.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : BY MOHAMMED ALMUSWI | @ONCLIK**".format(email,username,name,bio,post,followers,following),parse_mode = "markdown")
 										
-			elif '/Instagram_yahoo'==me.text:
+			#elif '/Instagram_yahoo'==me.text:
 				
 				
 				
 				
-			elif '/Instagram_hotmail'==me.text:
+			#elif '/Instagram_hotmail'==me.text:
 				
 				
 				
 				
-			elif '/Instagram_aol'==me.text:
+			#elif '/Instagram_aol'==me.text:
 				
 				
 				
 				
-			elif '/Instagram_mailru'==me.text:
+			#elif '/Instagram_mailru'==me.text:
 				
 				
 				
 				
-			elif '/Instagram_outlook'==me.text:
+			#elif '/Instagram_outlook'==me.text:
 				
 				
 				
