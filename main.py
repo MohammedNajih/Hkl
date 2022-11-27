@@ -585,6 +585,7 @@ def start(me):
 							emil = random.choice(em)
 							email = emil+domin
 							user = email.split('@')[0]
+							bot.send_message(me.chat.id,text=email+' Cheack...', parse_mode="markdown") 
 							if (email.split('@')[1])=='gmail.com':
 									email = email
 									user = user
