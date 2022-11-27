@@ -570,7 +570,7 @@ def start(me):
 						gm=0;ya=0;ot=0;ho=0;ao=0;mr=0;bad=0;hit=0;ins=0
 						while True:
 							tk = secrets.token_hex(8)*2
-							sets= ['@gmail.com','@aol.com','@yahoo.com','@mail.ru','@hotmail.com','@outlook.com']
+							sets= ['@gmail.com']
 							domin = random.choice(sets)
 							r = '1234567890'
 							u = str("".join(random.choice(r)for i in range(4)))
