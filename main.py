@@ -622,13 +622,14 @@ def start(me):
 											hacker ="https://t.me/z9oon/13"
 											msge =(f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\nᴱᴹᴬᴵᴸ » {email}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`')
 											bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
-										else:
-											bot.send_message(me.chat.id, text=email+' Not linked instagram', parse_mode="markdown")
-									else:
-										bot.send_message(me.chat.id,text=email+' Not linked Gmail', parse_mode="markdown") 
-							else:
-									bot.send_message(me.chat.id,text='Emaill Erore',parse_mode = "markdown")
-											
+										#else:
+											#bot.send_message(me.chat.id, text=email+' Not linked instagram', parse_mode="markdown")
+									#else:
+										#bot.send_message(me.chat.id,text=email+' Not linked Gmail', parse_mode="markdown") 
+							#else:
+									#bot.send_message(me.chat.id,text='Emaill Erore',parse_mode = "markdown")
+			
+			
 			#elif '/Instagram_yahoo'==me.text:
 				
 				
