@@ -602,7 +602,7 @@ def start(me):
 							req = requests.post(url,headers=headers,data=data).text
 							if '"available":false' and '"email_is_taken"' in req:
 								bot.send_message(me.chat.id,text=email+' Linked Instagram🍑.', parse_mode="markdown") 
-								req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}&user2={user}').json()
+								req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}').json()
 								info = req['results']['instagram']
 								username = info['USERNAME']
 								id = info['ID']
@@ -630,8 +630,55 @@ def start(me):
 						#bot.send_message(me.chat.id,text='Emaill Erore',parse_mode = "markdown")
 			
 			
-			#elif '/Instagram_yahoo'==me.text:
-				
+			elif '/Instagram_yandex'==me.text:
+				r = '1234567890'
+				while True:
+					tk = secrets.token_hex(8)*2
+					sets= ['@yandex.ru']
+					domin = random.choice(sets)
+					u = str("".join(random.choice(r)for i in range(4)))
+					n0 = names.get_first_name(gender='male')
+					n1 = names.get_first_name()
+					n2 = names.get_first_name(gender='femal')
+					pa2 = n0 + u 
+					pa3 = n1 + u 
+					pa4 = n2 + u
+					ema = Faker().email().split("@")[0]
+					em = (n0,n1,n2,ema,pa2,pa3,pa4)
+					emil = random.choice(em)
+					email = emil+domin
+					user = email.split('@')[0]
+					req_get = requests.get("https://passport.yandex.ru/",headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"}).text
+					csrf_token = req_get.split('name="csrf_token" value="')[1].split('"')[0]
+					uuid = req_get.split("amp;process_uuid=")[1].split('"')[0]
+					req_post = requests.post(f"https://mobileproxy.passport.yandex.net/2/bundle/mobile/start/?device_id=946f798c3d9a4f4d9fe16c9a710db443&manufacturer=HUAWEI&model=DUB-LX1&app_platform=Android%208.1.0%20%28REL%29&am_version_name=7.28.0%28728002456%29&app_id=com.yandex.toloka.androidapp&app_version_name=2.29.0&am_app=com.yandex.toloka.androidapp%202.29.0&deviceid=946f798c3d9a4f4d9fe16c9a710db443&uuid={uuid}",data=f"login={user}&force_register=false&is_phone_number=false&x_token_client_id=c0ebe342af7d48fbbbfcf2d2eedb8f9e&x_token_client_secret=ad0a908f0aa341a182a37ecd75bc319e&client_id=cc30146866984f698e5fe6dea590e044&client_secret=012e24452e3543458a9c2f1c86464ffa&display_language=en&payment_auth_retpath=https%3A%2F%2Fpassport.yandex.com%2Fclosewebview",headers ={"User-Agent":"com.yandex.mobile.auth.sdk/7.28.0.728002456 (HUAWEI DUB-LX1; Android 8.1.0)","Content-Type":"application/x-www-form-urlencoded","Content-Length":"341","Host":"mobileproxy.passport.yandex.net","Connection":"Keep-Alive","Accept-Encoding":"gzip"}).text
+					if '"status": "error",' in req_post or '"account.not_found"' in req_post or '"can_register": true,' in req_post:
+						bot.send_message(me.chat.id,text=email+' Avaliable yandex 📧',parse_mode="markdown")
+						url = 'https://www.instagram.com/accounts/check_email/'
+						headers ={'Host':'www.instagram.com','content-length':'27','sec-ch-ua':'"Chromium";v="105", "Not)A;Brand";v="8"','x-ig-app-id':'1217981644879628','x-ig-www-claim':'hmac.AR0N6DyPHRuZODwh15vC55Or1-znqJ3K5w6LMfznLWspz1e4','sec-ch-ua-mobile':'?1','x-instagram-ajax':'2c4043b0c5cb','content-type':'application/x-www-form-urlencoded','accept':'*/*','x-requested-with':'XMLHttpRequest','x-asbd-id':'198387','user-agent':'Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Mobile Safari/537.36','x-csrftoken':'tVf5LI2NxLCqp5lnl9S0rvcWpAdmIH6S','sec-ch-ua-platform':'"Android"','origin':'https://www.instagram.com','sec-fetch-site':'same-origin','sec-fetch-mode':'cors','sec-fetch-dest':'empty','referer':'https://www.instagram.com/accounts/signup/email','accept-encoding':'gzip, deflate, br','accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5','cookie':'csrftoken=tVf5LI2NxLCqp5lnl9S0rvcWpAdmIH6S','cookie':'mid=Yzct2AABAAFahrlJIwQ_roYCddrY','cookie':'ig_did=F9626AFD-F0EC-4DA1-898A-A41065957469','cookie':'ig_nrcb=1'}
+						data ={'email':email}
+						req = requests.post(url,headers=headers,data=data).text
+						if '"available":false' and '"email_is_taken"' in req:
+							req = requests.get(f'https://php-str.herokuapp.com/users.php?user1={user}').json()
+							info = req['results']['instagram']
+							username = info['USERNAME']
+							id = info['ID']
+							name = info['NAME']
+							bio = info['BIO']
+							post = info['POSTS']
+							bio_link = info['BIO_LINK']
+							followers = info['FOLLOWERS']
+							following = info['FOLLOWING']
+							isp = info['PRIVATE']
+							ver = info['VERIFIED']
+							img = info['IMAGE_PROFILE']
+							#phone =info['PHONE']
+							lok = requests.get(f"https://o7aa.pythonanywhere.com/?id={id}")
+							iok = lok.json()
+							date = str(iok['date'])
+							hacker ="https://t.me/z9oon/13"
+							msge = (f'`🦍 INFO ᴵᴺˁᵀᴬᴳᴿᴬᴹ ᴮʸ ᴹᴼᴴᴬᴹᴹᴱᴰ ᴬᴸᴹᵁˁᵂᴵ⌯\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n🚹 ɴᴀᴍᴇ » {name}\n💡 ᴜsᴇʀɴᴀᴍᴇ » {username}\nᴱᴹᴬᴵᴸ » {email}\n🚻 ғᴏʟʟᴏᴡᴇʀs » {followers}\n🚸 ғᴏʟʟᴏᴡɪɴɢ » {following}\n📆 ᴅᴀᴛᴇ » {date}\n🗿 ɪᴅ » {id}\n📫 ᴘᴏsᴛs » {post}\n🗳️ ᴘʀɪvᴀᴛᴇ » {isp}\n📥 verified » {ver}\n📈 ʙɪᴏ » {bio}\n📽️ ʙɪᴏ LINK » {bio_link}\n📊 𝙻𝙸𝙽𝚔 » https://www.instagram.com/{user}\n• ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ •\n`')
+							bot.send_photo(me.chat.id,img,caption=msge,parse_mode = "markdown")
 				
 				
 				
