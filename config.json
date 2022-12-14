@@ -1,0 +1,17 @@
+{'h':{
+'Host':'anatakip.com',
+'content-length':'99',
+'sec-ch-ua':'"Chromium";v="107", "Not=A?Brand";v="24"',
+'accept':'application/json, text/javascript, */*; q=0.01',
+'content-type':'application/x-www-form-urlencoded; charset=UTF-8',
+'x-requested-with':'XMLHttpRequest',
+'sec-ch-ua-mobile':'?1',
+'user-agent':'Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36',
+'sec-ch-ua-platform':'"Android"',
+'origin':'https://anatakip.com',
+'sec-fetch-site':'same-origin',
+'sec-fetch-mode':'cors',
+'sec-fetch-dest':'empty',
+'referer':'https://anatakip.com/login',
+'accept-encoding':'gzip, deflate',
+'accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5'}}
