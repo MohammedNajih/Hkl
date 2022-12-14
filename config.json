@@ -1,17 +1,40 @@
-{'h':{
-'Host':'anatakip.com',
-'content-length':'99',
-'sec-ch-ua':'"Chromium";v="107", "Not=A?Brand";v="24"',
-'accept':'application/json, text/javascript, */*; q=0.01',
-'content-type':'application/x-www-form-urlencoded; charset=UTF-8',
-'x-requested-with':'XMLHttpRequest',
-'sec-ch-ua-mobile':'?1',
-'user-agent':'Mozilla/5.0 (Linux; Android 10; YAL-L21) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36',
-'sec-ch-ua-platform':'"Android"',
-'origin':'https://anatakip.com',
-'sec-fetch-site':'same-origin',
-'sec-fetch-mode':'cors',
-'sec-fetch-dest':'empty',
-'referer':'https://anatakip.com/login',
-'accept-encoding':'gzip, deflate',
-'accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5'}}
+{
+  "captcha": {
+    "enabled": false,
+    "key": ""
+  },
+  "gdpr_required": false,
+  "tos_version": "row",
+  "seo_category_infos": [
+    {
+      "key": "beauty",
+      "name": "Beauty"
+    },
+    {
+      "key": "dance_and_performance",
+      "name": "Dance \u0026 Performance"
+    },
+    {
+      "key": "fitness",
+      "name": "Fitness"
+    },
+    {
+      "key": "food_and_drink",
+      "name": "Food \u0026 Drink"
+    },
+    {
+      "key": "home_and_garden",
+      "name": "Home \u0026 Garden"
+    },
+    {
+      "key": "music",
+      "name": "Music"
+    },
+    {
+      "key": "visual_arts",
+      "name": "Visual Arts"
+    }
+  ],
+  "ram_class": "0-0.75 gb",
+  "status": "ok"
+}
