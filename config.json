@@ -1,4 +1,4 @@
-'h':{
+{'h':{
 'Host':'anatakip.com',
 'content-length':'99',
 'sec-ch-ua':'"Chromium";v="107", "Not=A?Brand";v="24"',
@@ -14,4 +14,4 @@
 'sec-fetch-dest':'empty',
 'referer':'https://anatakip.com/login',
 'accept-encoding':'gzip, deflate',
-'accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5'}
+'accept-language':'en-IQ,en;q=0.9,ar-IQ;q=0.8,ar;q=0.7,en-GB;q=0.6,en-US;q=0.5'}}
